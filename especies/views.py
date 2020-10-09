@@ -9,25 +9,10 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-def teste(request):
-     texts = ['Lorem ipsum dolor sit amet, consectetur adipisicing ']
-     context = {
-    	'title':'django e-commerce',
-    	'texts':texts
-     }
-     return render(request, 'especie/list.html', context)
-
-
-def view_list(request) :
-    context = {
-        'texts' : Especie.objects.all()
-    }
-    return render(request, 'especie/list.html', context)
-
 def get_all_species():
     return sorted( Especie.objects.all(), key=lambda x : x.nome)
 
-class IndexView(ListView):
+class EspeciesView(ListView):
     template_name = 'especie/list.html'
     context_object_name = 'especie_list'
 

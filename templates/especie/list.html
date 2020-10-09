@@ -15,7 +15,7 @@
         <div class="col-md-10 col-xs-10 col-sm-10"></div>
         <div class="col-md-2 col-xs-1 col-sm-1">
             <br />
-            <a href="{% url 'create' %}">
+            <a href="{% url 'create_especie' %}">
                 <button type="button" class="btn btn-success"> Nova Espécie</button>
             </a>
         </div>
@@ -27,7 +27,7 @@
         <div class="col-md-9 col-xs-9 col-sm-9">
             <ul class="list-group">
                 <li class="list-group-item ">
-                    <a href="{% url 'edit' especie.id%}"><i>{{ especie.nome }}</i></a>
+                    <a href="{% url 'edit_especie' especie.id%}"><i>{{ especie.nome }}</i></a>
                 </li>
             </ul>
         </div>
@@ -41,7 +41,7 @@
         <div class="col-md-1 col-xs-1 col-sm-1">
             <ul class="list-group">
                 <li class="list-group-item ">
-                  <a href="{% url 'delete' especie.id%}">  <i class="fas fa-trash-alt"> </i></a>
+                  <a href="{% url 'delete_especie' especie.id%}">  <i class="fas fa-trash-alt"> </i></a>
                 </li>
             </ul>
         </div>
