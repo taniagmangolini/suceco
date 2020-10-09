@@ -24,3 +24,6 @@ class FormacaoFlorestal(models.Model) :
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
     status = models.CharField(max_length=15, choices=STATUS, default='Ativo')
+
+    def __str__(self):
+        return self.nome

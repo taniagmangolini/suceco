@@ -1,5 +1,9 @@
 from django import forms
 from .models import Registro
+from formacaoflorestal.models import FormacaoFlorestal
+from especies.models import Especie
+from django.forms import ModelChoiceField
+
 
 class RegistroForm(forms.ModelForm):
     class Meta:
@@ -10,5 +14,14 @@ class RegistroForm(forms.ModelForm):
                       'estagio' : ('Estágio Sucessional'),
                       'formacao_florestal': ('Formação Florestal'),
                       'estado' : ('Estado'),
-                      'status': ('Status') }
+                      'status': ('Status') ,
+                      'referencia': ('Referência')}
         widgets = {'id' : forms.TextInput(attrs={'readonly' : 'readonly'})}
+
+        def __init__(self, *args, **kwargs) :
+            self.fields['formacao_florestal'] = ModelChoiceField(queryset=FormacaoFlorestal.objects.all(),
+                                                                       to_field_name='nome',
+                                                                       empty_label="Selecione a Formação Florestal")
+            self.fields['especie'] = ModelChoiceField(queryset=Especie.objects.all(),
+                                                                       to_field_name='nome',
+                                                                       empty_label="Selecione a Espécie")

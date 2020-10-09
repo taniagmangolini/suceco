@@ -149,7 +149,13 @@ LOGGING = {
             'propagate' : False
         },
 
-	'noisy_module': {
+        'registros' : {
+            'level' : 'INFO',
+            'handlers' : ['file', 'console'],
+            'propagate' : False
+        },
+
+        'noisy_module': {
             'level':'ERROR',
             'handlers': ['console'],
             'propagate': False

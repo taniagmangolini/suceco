@@ -20,7 +20,11 @@ body {
 	  color: black;
 }
 
-.especie {
-  font-style: italic;
+.list-group-item {
+  font-size: 12px;
+}
+
+.small-font-size{
+  font-size: 10px;
 }
 

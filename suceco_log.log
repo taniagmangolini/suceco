@@ -704,3 +704,91 @@ False
 >>>edit especie: b4329f8f-b468-42ca-96e9-9de2edf2ccb3
 Especie object (b4329f8f-b468-42ca-96e9-9de2edf2ccb3)
 True
+>>>edit especie: 8fd6b6cd-d18b-42b3-87b0-243e880be273
+Especie object (8fd6b6cd-d18b-42b3-87b0-243e880be273)
+False
+
+>>>edit especie: f367376a-301a-4466-91f3-2e24322493a4
+Especie object (f367376a-301a-4466-91f3-2e24322493a4)
+False
+
+>>>edit especie: b4329f8f-b468-42ca-96e9-9de2edf2ccb3
+Especie object (b4329f8f-b468-42ca-96e9-9de2edf2ccb3)
+False
+
+>>>edit especie: b4329f8f-b468-42ca-96e9-9de2edf2ccb3
+Especie object (b4329f8f-b468-42ca-96e9-9de2edf2ccb3)
+True
+>>>edit formacaoflorestal: fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+FormacaoFlorestal object (fb5b7d38-f736-4b0f-a960-bb41389aeb0e)
+False
+
+POST
+>>>edit formacaoflorestal: ddc83e39-9b0e-404f-ab63-17f1616e0985
+<tr><th><label for="id_id">Id:</label></th><td><input type="text" name="id" value="b3908ed6-4380-416c-9b33-3455f5ac90c7" readonly="readonly" required id="id_id"><input type="hidden" name="initial-id" value="b3908ed6-4380-416c-9b33-3455f5ac90c7" id="initial-id_id"><br><span class="helptext">Id</span></td></tr>
+<tr><th><label for="id_nome">Formação Florestal:</label></th><td><input type="text" name="nome" maxlength="500" required id="id_nome"><br><span class="helptext">Formação Florestal</span></td></tr>
+<tr><th><label for="id_dominio">Dominio:</label></th><td><select name="dominio" id="id_dominio">
+  <option value="Amazonia">Amazonia</option>
+
+  <option value="Mata Atlantica">Mata Atlantica</option>
+
+  <option value="Caatinga">Caatinga</option>
+
+  <option value="Cerrado">Cerrado</option>
+
+  <option value="Pantanal">Pantanal</option>
+
+  <option value="Pradarias">Pradarias</option>
+
+  <option value="" selected></option>
+
+</select><br><span class="helptext">Domínio</span></td></tr>
+<tr><th><label for="id_status">Status:</label></th><td><select name="status" id="id_status">
+  <option value="Ativo" selected>Ativo</option>
+
+  <option value="Inativo">Inativo</option>
+
+</select><br><span class="helptext">Status</span></td></tr>
+=>>>> Erro ao editar formacaoflorestal
+>>>edit registros: ddc83e39-9b0e-404f-ab63-17f1616e0985
+Registro object (ddc83e39-9b0e-404f-ab63-17f1616e0985)
+False
+
+>>>edit registros: ddc83e39-9b0e-404f-ab63-17f1616e0985
+Registro object (ddc83e39-9b0e-404f-ab63-17f1616e0985)
+True
+>>>edit registros: ddc83e39-9b0e-404f-ab63-17f1616e0985
+Registro object (ddc83e39-9b0e-404f-ab63-17f1616e0985)
+False
+
+>>>edit registros: ddc83e39-9b0e-404f-ab63-17f1616e0985
+Registro object (ddc83e39-9b0e-404f-ab63-17f1616e0985)
+True
+>>>edit registros: ddc83e39-9b0e-404f-ab63-17f1616e0985
+Registro object (ddc83e39-9b0e-404f-ab63-17f1616e0985)
+False
+
+>>>edit registros: ddc83e39-9b0e-404f-ab63-17f1616e0985
+Registro object (ddc83e39-9b0e-404f-ab63-17f1616e0985)
+True
+delete registros: ddc83e39-9b0e-404f-ab63-17f1616e0985
+deletado!
+POST
+>>>edit registros: 5cbee4fc-257d-4512-b337-226c371756a7
+Registro object (5cbee4fc-257d-4512-b337-226c371756a7)
+False
+
+>>>edit registros: 5cbee4fc-257d-4512-b337-226c371756a7
+Registro object (5cbee4fc-257d-4512-b337-226c371756a7)
+False
+
+>>>edit registros: 5cbee4fc-257d-4512-b337-226c371756a7
+Registro object (5cbee4fc-257d-4512-b337-226c371756a7)
+True
+>>>edit registros: 5cbee4fc-257d-4512-b337-226c371756a7
+Registro object (5cbee4fc-257d-4512-b337-226c371756a7)
+False
+
+>>>edit registros: 5cbee4fc-257d-4512-b337-226c371756a7
+Registro object (5cbee4fc-257d-4512-b337-226c371756a7)
+True

@@ -15,8 +15,8 @@
         <div class="col-md-10 col-xs-10 col-sm-10"></div>
         <div class="col-md-2 col-xs-1 col-sm-1">
             <br />
-            <a href="{% url 'create' %}">
-                <button type="button" class="btn btn-success"> Nova </button>
+            <a href="{% url 'create_registro' %}">
+                <button type="button" class="btn btn-success"> Novo Registro </button>
             </a>
         </div>
     </div>
@@ -24,24 +24,45 @@
 
   {% for registro in  registros_list %}
     <div class="row">
-        <div class="col-md-5 col-xs-5 col-sm-5">
+        <div class="col-md-3 col-xs-3 col-sm-3">
             <ul class="list-group">
-                <li class="list-group-item ">
-                    <a href="{% url 'edit' registro.id%}"><i>{{ registro.especie }}</i></a>
+                <li class="list-group-item small-font-size">
+                    <a href="{% url 'edit_registro' registro.id%}"><i>{{ registro.especie }}</i></a>
                 </li>
             </ul>
         </div>
         <div class="col-md-2 col-xs-2 col-sm-2">
             <ul class="list-group">
-                <li class="list-group-item ">
-                   {{ registro.status }}
+                <li class="list-group-item small-font-size">
+                   {{ registro.estagio }}
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4 col-xs-4 col-sm-4">
+            <ul class="list-group">
+                <li class="list-group-item small-font-size">
+                   {{ registro.formacao_florestal }}
                 </li>
             </ul>
         </div>
         <div class="col-md-1 col-xs-1 col-sm-1">
             <ul class="list-group">
-                <li class="list-group-item ">
-                  <a href="{% url 'delete' registro.id%}">  <i class="fas fa-trash-alt"> </i></a>
+                <li class="list-group-item small-font-size ">
+                   {{ registro.estado }}
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1">
+            <ul class="list-group">
+                <li class="list-group-item small-font-size">
+                  <a href=""><i class="fa fa-link" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1">
+            <ul class="list-group">
+                <li class="list-group-item small-font-size>
+                  <a href="{% url 'delete_registro' registro.id%}">  <i class="fas fa-trash-alt"> </i></a>
                 </li>
             </ul>
         </div>
