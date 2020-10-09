@@ -1,0 +1,41 @@
+{% load static %}
+<html>
+<head>
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'fa/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- Navbar -->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">	
+              <a class="navbar-brand" href="#">
+	      	<img src="{% static 'images/logo.png' %}" >
+		<strong class='titulo'> Banco de Dados de Classificação Sucessional  </strong>
+              </a>
+	     <!--
+	      <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+	      </div>
+				
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                </ul>	-->
+              </div>
+            </div>
+          </nav>
+     <!-- Navbar -->
+</head>
+<body>
+ <!-- Page Content -->
+<div class="container">
+{% block content %}
+{% endblock %}
+<body>
+</html>

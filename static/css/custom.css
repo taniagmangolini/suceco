@@ -1,0 +1,26 @@
+body {
+   background: url('../images/forest-5594153_1280.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.navbar {
+    background-color: white;
+	font-size: 30px;
+	color: black;
+
+}
+
+.navbar .navbar-brand {
+    color: black;
+}
+.titulo{
+	  color: black;
+}
+
+.especie {
+  font-style: italic;
+}
+
