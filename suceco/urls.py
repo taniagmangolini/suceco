@@ -22,7 +22,6 @@ from . import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/', views.index),
-    path('sucecoapp/', include('sucecoapp.urls')),
     path('especies/', include('especies.urls')),
     path('formacaoflorestal/', include('formacaoflorestal.urls')),
     path('registros/', include('registros.urls')),

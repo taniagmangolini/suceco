@@ -32,7 +32,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # Application definition
 
 INSTALLED_APPS = [
-    'sucecoapp.apps.SucecoappConfig',
     'especies.apps.EspeciesConfig',
     'formacaoflorestal.apps.FormacaoFlorestalConfig',
     'registros.apps.RegistrosConfig',
