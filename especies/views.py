@@ -5,6 +5,8 @@ from django.shortcuts import render, redirect, get_object_or_404,get_list_or_404
 from .models import Especie
 from .forms import EspecieForm
 from django.views.generic import ListView, DetailView
+from django.contrib.auth.decorators import login_required
+
 import logging
 
 logger = logging.getLogger(__name__)
@@ -19,6 +21,7 @@ class EspeciesView(ListView):
     def get_queryset(self):
         return get_all_species()
 
+@login_required
 def create(request):
     form = EspecieForm()
     try:
@@ -39,10 +42,8 @@ def create(request):
         logger.info("=>>>> Erro ao criar especie")
         return render(request, 'especie/create.html', {'form' : form})
 
-#class EspecieDetailView(DetailView):
-#    model = Especie
-#    template_name = 'especie/detail.html'
 
+@login_required
 def edit(request, id, template_name='especie/edit.html'):
     logger.info('>>>edit especie: ' + id)
     try :
@@ -61,6 +62,7 @@ def edit(request, id, template_name='especie/edit.html'):
         logger.info("=>>>> Erro ao editar especie")
         return render(request, template_name, {'form' : form})
 
+@login_required
 def delete(request, id, template_name='especie/delete.html'):
     logger.info('delete especie: ' + id)
     try:

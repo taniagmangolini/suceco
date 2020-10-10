@@ -6,9 +6,11 @@ from .models import FormacaoFlorestal
 from .forms import FormacaoFlorestalForm
 from django.views.generic import ListView, DetailView
 import logging
+from django.contrib.auth.decorators import login_required
 
 logger = logging.getLogger(__name__)
 
+@login_required
 def view_list(request) :
     context = {
         'texts' : FormacaoFlorestal.objects.all()
@@ -25,6 +27,7 @@ class FormacaoFlorestalView(ListView):
     def get_queryset(self):
         return get_all_formacoes()
 
+@login_required
 def create(request):
     form = FormacaoFlorestalForm()
     try:
@@ -44,6 +47,7 @@ def create(request):
         logger.info("=>>>> Erro ao criar formacao florestal")
         return render(request, 'formacaoflorestal/create.html', {'form' : form})
 
+@login_required
 def edit(request, id, template_name='formacaoflorestal/edit.html'):
     form = FormacaoFlorestalForm()
     logger.info('>>>edit formacaoflorestal: ' + id)
@@ -63,7 +67,7 @@ def edit(request, id, template_name='formacaoflorestal/edit.html'):
         logger.info("=>>>> Erro ao editar formacaoflorestal")
         return render(request, template_name, {'form' : form})
 
-
+@login_required
 def delete(request, id, template_name='formacaoflorestal/delete.html'):
     logger.info('delete formacaoflorestal: ' + id)
     try:

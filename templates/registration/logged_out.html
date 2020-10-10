@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <div class="card border-0 shadow my-5">
+    <div class="card-body p-5">
+  <p>Sessão encerrada.</p>
+  <a href="{% url 'login'%}">Clique aqui para acessar novamente</a>
+ </div>
+</div>
+{% endblock %}

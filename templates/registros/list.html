@@ -17,18 +17,20 @@
 						</div>
                         <input type="submit" name="submit" value="Procurar"  />
             </form>
+        {% if request.user.is_authenticated%}
         <div>
                     <a href="{% url 'create_registro' %}">
                         <button type="button" class="btn btn-success"> Novo Registro </button>
                     </a>
            </div>
+        {% endif %}
     </br>
    {% if especie_selected  %}
         <h5> {{nr_registros}} resultados para a espécie <i> {{especie_selected.nome}} </i>  </h5>
    {% endif %}
 
   {% for registro in  registros_list %}
-    <div class="row ">
+    <div class="row justify-content-center">
         <div class="col-md-2 col-xs-2 col-sm-2 ">
             <ul class="list-group">
                 <li class="list-group-item small-font-size">
@@ -57,6 +59,7 @@
                 </li>
             </ul>
         </div>
+   {% if request.user.is_authenticated%}
         <div class="col-md-1 col-xs-1 col-sm-1">
             <ul class="list-group">
                 <li class="list-group-item small-font-size">
@@ -64,6 +67,7 @@
                 </li>
             </ul>
         </div>
+
         <div class="col-md-1 col-xs-1 col-sm-1">
             <ul class="list-group">
                 <li class="list-group-item small-font-size">
@@ -71,6 +75,7 @@
                 </li>
             </ul>
         </div>
+        {% endif %}
     </div>
     {% endfor %}
 </div>

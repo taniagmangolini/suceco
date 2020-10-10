@@ -821,3 +821,31 @@ False
 >>>edit registros: 56199c58-27ee-4d12-8918-32d0fb636040
 Registro object (56199c58-27ee-4d12-8918-32d0fb636040)
 True
+>>>edit formacaoflorestal: fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+Floresta Ombrófila Densa Montana
+False
+
+>>>edit formacaoflorestal: fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+Floresta Ombrófila Densa Montana
+True
+>>>edit formacaoflorestal: fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+Floresta Ombrófila Densa Montana
+False
+
+>>>edit formacaoflorestal: fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+Floresta Ombrófila Densa Montana
+True
+>>>edit especie: b4329f8f-b468-42ca-96e9-9de2edf2ccb3
+Euterpe edulis
+False
+
+>>>edit especie: b4329f8f-b468-42ca-96e9-9de2edf2ccb3
+Euterpe edulis
+True
+>>>edit especie: b4329f8f-b468-42ca-96e9-9de2edf2ccb3
+Euterpe edulis
+False
+
+>>>edit especie: b4329f8f-b468-42ca-96e9-9de2edf2ccb3
+Euterpe edulis
+True

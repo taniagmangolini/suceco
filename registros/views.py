@@ -6,17 +6,11 @@ from django.shortcuts import render, redirect, get_object_or_404,get_list_or_404
 from .models import Registro
 from especies.models import Especie
 from .forms import RegistroForm
-from django.views.generic import ListView, DetailView
+from django.contrib.auth.decorators import login_required
+
 import logging
 
 logger = logging.getLogger(__name__)
-
-#class RegistrosView(ListView):
-#    template_name = 'registros/list.html'
-#    context_object_name = 'registros_list'
-#    def get_queryset(self):
-#        all_registros =  sorted(Registro.objects.all(), key=lambda x : x.especie)
-#        return all_registros
 
 @csrf_exempt
 def index(request) :
@@ -52,6 +46,7 @@ def search(request, id=None):
 
     return render(request, template_name , contexto )
 
+@login_required
 def create(request):
     form = RegistroForm()
     try:
@@ -71,6 +66,7 @@ def create(request):
         logger.info("=>>>> Erro ao criar registros")
         return render(request, 'registros/create.html', {'form' : form})
 
+@login_required
 def edit(request, id, template_name='registros/edit.html') :
         form = RegistroForm()
         logger.info('>>>edit registros: ' + id)
@@ -90,6 +86,7 @@ def edit(request, id, template_name='registros/edit.html') :
             logger.info("=>>>> Erro ao editar registros")
             return render(request, template_name, {'form' : form})
 
+@login_required
 def delete(request, id, template_name='registros/delete.html') :
         logger.info('delete registros: ' + id)
         try :
