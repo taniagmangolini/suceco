@@ -9,7 +9,8 @@ class Registro(models.Model) :
         ('Secundária Inicial', 'Secundária Inicial'),
         ('Secundária Tardia', 'Secundária Tardia'),
         ('Umbrófila', 'Umbrófila'),
-        ('Secundária', 'Secundária')
+        ('Secundária', 'Secundária'),
+        ('Climácica', 'Climácica')
     )
 
     STATUS = (
@@ -57,5 +58,6 @@ class Registro(models.Model) :
     estado = models.CharField(max_length=50, choices=ESTADOS)
     status = models.CharField(max_length=15, choices=STATUS, default='Ativo')
     referencia = models.CharField(max_length=1000, default='')
+    detalhes = models.CharField(max_length=1000, default= '')
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
