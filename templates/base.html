@@ -16,7 +16,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav"  style="font-size: 0.75em !important;">
+    <ul class="navbar-nav"  style="font-size: 1.5em !important;">
       <li class="nav-item">
         <a class="nav-link" href="/registros/">Registros</a>
       </li>
@@ -32,9 +32,9 @@
   </div>
    <ul class="nav navbar-nav navbar-right" >
        {% if request.user.is_authenticated%}
-            <li><a style="font-size: 0.5em !important; color: black" href="/accounts/logout"><span class="fas fa-sign-out-alt"></span> <span >Logout</span></a></li>
+            <li><a style="font-size: 1.5em !important; color: black" href="/accounts/logout"><span class="fas fa-sign-out-alt"></span> <span >Logout</span></a></li>
        {% else %}
-             <li><a style="font-size: 0.5em !important; color: black" href="/accounts/login"><span class="fas fa-sign-in-alt"></span> <span >Login</span></a></li>
+            <li><a style="font-size: 1.5em !important; color: black" href="/accounts/login"><span class="fas fa-sign-in-alt"></span> <span >Login</span></a></li>
         {% endif %}
     </ul>
 </nav>
