@@ -1,29 +1,56 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404,get_list_or_404
 from .models import Registro
+from especies.models import Especie
 from .forms import RegistroForm
 from django.views.generic import ListView, DetailView
 import logging
 
 logger = logging.getLogger(__name__)
 
-def view_list(request) :
-    context = {
-        'texts' : Registro.objects.all()
+#class RegistrosView(ListView):
+#    template_name = 'registros/list.html'
+#    context_object_name = 'registros_list'
+#    def get_queryset(self):
+#        all_registros =  sorted(Registro.objects.all(), key=lambda x : x.especie)
+#        return all_registros
+
+@csrf_exempt
+def index(request) :
+    especies_list =   sorted(  Especie.objects.all(), key=lambda x : x.nome)
+    contexto = {
+        'especies_list' : especies_list,
+        'registros_list': None,
+        'id_especie': None,
+        'especie_selected': None,
+        'nr_registros': None
     }
-    return render(request, 'registros/list.html', context)
+    return render(request, 'registros/list.html', contexto)
 
-def get_all_registros():
-    return sorted( Registro.objects.all(), key=lambda x : x.especie)
-
-class RegistrosView(ListView):
+@csrf_exempt
+def search(request, id=None):
+    especies_list = sorted(Especie.objects.all(), key=lambda x : x.nome)
+    especie_selected = None
     template_name = 'registros/list.html'
-    context_object_name = 'registros_list'
+    id_especie = request.POST.get("id_especie")
+    registros = ''
 
-    def get_queryset(self):
-        return get_all_registros()
+    if id_especie != None:
+        registros = Registro.objects.filter(especie=id_especie)
+        especie_selected = get_object_or_404(Especie, id=id_especie)
+
+    contexto = {
+        'especies_list' : especies_list,
+        'registros_list': registros,
+        'id_especie': None,
+        'especie_selected' : especie_selected,
+        'nr_registros' : len(registros)
+    }
+
+    return render(request, template_name , contexto )
 
 def create(request):
     form = RegistroForm()

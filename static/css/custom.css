@@ -28,3 +28,7 @@ body {
   font-size: 10px;
 }
 
+.nopadding {
+   padding: 0 px;
+   margin: 0 px;
+}

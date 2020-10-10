@@ -792,3 +792,32 @@ False
 >>>edit registros: 5cbee4fc-257d-4512-b337-226c371756a7
 Registro object (5cbee4fc-257d-4512-b337-226c371756a7)
 True
+>>>edit registros: 5cbee4fc-257d-4512-b337-226c371756a7
+Registro object (5cbee4fc-257d-4512-b337-226c371756a7)
+False
+
+POST
+ID ===>>>>>>
+ID ===>>>>>>
+ID ===>>>>>>
+ID ===>>>>>>
+ID ===>>>>>>
+ID ===>>>>>>
+ID ===>>>>>>
+ID ===>>>>>>None
+ID ===>>>>>>None
+ID ===>>>>>>None
+ID ===>>>>>>None
+ID ===>>>>>>
+ID ===>>>>>>
+ID ===>>>>>>
+ID ===>>>>>>
+POST
+POST
+>>>edit registros: 56199c58-27ee-4d12-8918-32d0fb636040
+Registro object (56199c58-27ee-4d12-8918-32d0fb636040)
+False
+
+>>>edit registros: 56199c58-27ee-4d12-8918-32d0fb636040
+Registro object (56199c58-27ee-4d12-8918-32d0fb636040)
+True

@@ -4,9 +4,9 @@ from formacaoflorestal.models import FormacaoFlorestal
 from especies.models import Especie
 from django.forms import ModelChoiceField
 
-
 class RegistroForm(forms.ModelForm):
     class Meta:
+
         model = Registro
         fields = '__all__'
         help_texts = {'id': ('Id'),
@@ -16,9 +16,13 @@ class RegistroForm(forms.ModelForm):
                       'estado' : ('Estado'),
                       'status': ('Status') ,
                       'referencia': ('Referência')}
-        widgets = {'id' : forms.TextInput(attrs={'readonly' : 'readonly'})}
+        widgets = {'id' : forms.TextInput(attrs={'readonly' : 'readonly'}),
+                    'especies_list': forms.HiddenInput  }
 
         def __init__(self, *args, **kwargs) :
+            super(RegistroForm, self).__init__(*args, **kwargs)
+            especies_list = inital.get('pricelist')
+
             self.fields['formacao_florestal'] = ModelChoiceField(queryset=FormacaoFlorestal.objects.all(),
                                                                        to_field_name='nome',
                                                                        empty_label="Selecione a Formação Florestal")
