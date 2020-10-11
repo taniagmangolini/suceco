@@ -849,3 +849,35 @@ False
 >>>edit especie: b4329f8f-b468-42ca-96e9-9de2edf2ccb3
 Euterpe edulis
 True
+>>>edit registros: 56199c58-27ee-4d12-8918-32d0fb636040
+Registro object (56199c58-27ee-4d12-8918-32d0fb636040)
+False
+
+>>>edit registros: 56199c58-27ee-4d12-8918-32d0fb636040
+Registro object (56199c58-27ee-4d12-8918-32d0fb636040)
+True
+>>>edit registros: 56199c58-27ee-4d12-8918-32d0fb636040
+Registro object (56199c58-27ee-4d12-8918-32d0fb636040)
+False
+
+>>>edit registros: 56199c58-27ee-4d12-8918-32d0fb636040
+Registro object (56199c58-27ee-4d12-8918-32d0fb636040)
+False
+
+>>>edit registros: 56199c58-27ee-4d12-8918-32d0fb636040
+Registro object (56199c58-27ee-4d12-8918-32d0fb636040)
+True
+>>>edit registros: 56199c58-27ee-4d12-8918-32d0fb636040
+Registro object (56199c58-27ee-4d12-8918-32d0fb636040)
+False
+
+>>>edit registros: 56199c58-27ee-4d12-8918-32d0fb636040
+Registro object (56199c58-27ee-4d12-8918-32d0fb636040)
+True
+>>>edit registros: 38ba8125-ecba-4cea-ac43-7d698e23b960
+Registro object (38ba8125-ecba-4cea-ac43-7d698e23b960)
+False
+
+>>>edit registros: 38ba8125-ecba-4cea-ac43-7d698e23b960
+Registro object (38ba8125-ecba-4cea-ac43-7d698e23b960)
+True

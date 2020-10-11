@@ -15,13 +15,13 @@ class RegistroForm(forms.ModelForm):
                       'formacao_florestal': ('Formação Florestal'),
                       'estado' : ('Estado'),
                       'status': ('Status') ,
+                      'detalhes' : ('Detalhes'),
                       'referencia': ('Referência')}
         widgets = {'id' : forms.TextInput(attrs={'readonly' : 'readonly'}),
                     'especies_list': forms.HiddenInput  }
 
         def __init__(self, *args, **kwargs) :
             super(RegistroForm, self).__init__(*args, **kwargs)
-            especies_list = inital.get('pricelist')
 
             self.fields['formacao_florestal'] = ModelChoiceField(queryset=FormacaoFlorestal.objects.all(),
                                                                        to_field_name='nome',
