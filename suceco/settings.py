@@ -87,8 +87,8 @@ WSGI_APPLICATION = 'suceco.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'db',
-        'USER': 'gfvqvdbbjfaccg',
+        'NAME':  os.environ.get("DATABASE"),
+        'USER': os.environ.get("USER_DATABASE"),
         'PASSWORD': os.environ.get("DB_PASSWORD"),
         'HOST': 'ec2-3-228-114-251.compute-1.amazonaws.com',
         'PORT': '5432'
