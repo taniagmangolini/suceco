@@ -29,6 +29,7 @@
         <h5> {{nr_registros}} resultados para a espécie <i> {{especie_selected.nome}} </i>  </h5>
    {% endif %}
 
+{% if registros_list  %}
 <div class="table-responsive">
 <table class="table">
   <thead>
@@ -42,7 +43,7 @@
    {% for registro in  registros_list %}
    <tr>
       <th scope="row">{{registro.estagio}}</th>
-      <td>{{registro.formacaoflorestal}}</td>
+      <td>{{registro.formacao_florestal}}</td>
       <td>{{registro.estado}}</td>
       <td>
         <a href="{{ registro.referencia }}" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>
@@ -56,6 +57,7 @@
   {% endfor %}
 </table>
 </div>
+{% endif %}
 
 </div>
 
