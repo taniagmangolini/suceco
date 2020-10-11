@@ -9,9 +9,12 @@
                             <label> Espécie:</label>
                             <select name=id_especie class="form-control">
                                 {% for sp in especies_list %}
-                                    <option value="{{sp.id}}">
-                                    {{sp.nome}}
-                                    </option>
+                                   {% if especie_selected.id != sp.id %}
+                                        <option value="{{sp.id}}">{{sp.nome}}</option>
+                                   {% endif%}
+                                   {% if especie_selected.id == sp.id %}
+                                        <option value="{{sp.id}}" selected>{{sp.nome}}</option>
+                                   {% endif%}
                                 {% endfor %}
                             </select>
 						</div>
