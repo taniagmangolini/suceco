@@ -5,12 +5,12 @@ from formacaoflorestal.models import FormacaoFlorestal
 
 class Registro(models.Model) :
     ESTAGIOS = (
-        ('Pioneira', 'Pioneira'),
-        ('Secundária Inicial', 'Secundária Inicial'),
-        ('Secundária Tardia', 'Secundária Tardia'),
-        ('Umbrófila', 'Umbrófila'),
-        ('Secundária', 'Secundária'),
-        ('Climácica', 'Climácica')
+        ('P', 'Pioneira'),
+        ('SI', 'Secundária Inicial'),
+        ('ST', 'Secundária Tardia'),
+        ('U', 'Umbrófila'),
+        ('S', 'Secundária'),
+        ('C', 'Climácica')
     )
 
     STATUS = (
