@@ -45,7 +45,19 @@
   </thead>
    {% for registro in  registros_list %}
    <tr>
-      <th scope="row">{{registro.estagio}}</th>
+      <th scope="row">
+           {% if registro.estagio == 'P' %} Pioneira {% endif %}
+           {% if registro.estagio == 'SI' %} Secundária Inicial {% endif %}
+           {% if registro.estagio == 'ST' %} Secundária Tardia {% endif %}
+           {% if registro.estagio == 'U' %} Umbrófila {% endif %}
+           {% if registro.estagio == 'S' %} Secundária {% endif %}
+           {% if registro.estagio == 'C' %}
+                Climácica
+           {% else %}
+                {{registro.estagio}}
+           {% endif %}
+
+      </th>
       <td>{{registro.formacao_florestal}}</td>
       <td>{{registro.estado}}</td>
       <td>
