@@ -46,12 +46,13 @@
    {% for registro in  registros_list %}
    <tr>
       <th scope="row">
-           {% if registro.estagio == 'P' %} Pioneira  {% elif %}
-           {% if registro.estagio == 'SI' %} Secundária Inicial  {% elif %}
-           {% if registro.estagio == 'ST' %} Secundária Tardia  {% elif %}
-           {% if registro.estagio == 'U' %} Umbrófila  {% elif %}
-           {% if registro.estagio == 'S' %} Secundária  {% elif %}
-           {% if registro.estagio == 'C' %} Climácica   {% else %}
+           {% if registro.estagio == 'P' %} Pioneira  
+           {% elif registro.estagio == 'SI' %} Secundária Inicial
+           {% elif registro.estagio == 'ST' %} Secundária Tardia
+           {% elif registro.estagio == 'U' %} Umbrófila
+           {% elif registro.estagio == 'S' %} Secundária
+           {% elif registro.estagio == 'C' %} Climácica
+           {% else %}
                 {{registro.estagio}}
            {% endif %}
 
