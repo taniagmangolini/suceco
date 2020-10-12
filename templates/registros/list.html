@@ -52,12 +52,12 @@
            {% if registro.estagio == 'U' %} Umbrófila {% endif %}
            {% if registro.estagio == 'S' %} Secundária {% endif %}
            {% if registro.estagio == 'C' %} Climácica  {% endif %}
-           {% if registro.estagio != 'P' and
-                 registro.estagio != 'C'% and
-                 registro.estagio != 'SI'% and
-                 registro.estagio != 'ST'% and
-                 registro.estagio != 'U'% and
-                 registro.estagio != 'S'% 
+           {% if registro.estagio != 'P'  and
+                 registro.estagio != 'C'  and
+                 registro.estagio != 'SI' and
+                 registro.estagio != 'ST' and
+                 registro.estagio != 'U'  and
+                 registro.estagio != 'S'
           }
                 {{registro.estagio}}
           {% endif %}
