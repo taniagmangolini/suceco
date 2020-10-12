@@ -46,21 +46,14 @@
    {% for registro in  registros_list %}
    <tr>
       <th scope="row">
-           {% if registro.estagio == 'P' %} Pioneira {% endif %}
-           {% if registro.estagio == 'SI' %} Secundária Inicial {% endif %}
-           {% if registro.estagio == 'ST' %} Secundária Tardia {% endif %}
-           {% if registro.estagio == 'U' %} Umbrófila {% endif %}
-           {% if registro.estagio == 'S' %} Secundária {% endif %}
-           {% if registro.estagio == 'C' %} Climácica  {% endif %}
-           {% if registro.estagio != 'P'  and
-                 registro.estagio != 'C'  and
-                 registro.estagio != 'SI' and
-                 registro.estagio != 'ST' and
-                 registro.estagio != 'U'  and
-                 registro.estagio != 'S'
-          %}
+           {% if registro.estagio == 'P' %} Pioneira  {% elif %}
+           {% if registro.estagio == 'SI' %} Secundária Inicial  {% elif %}
+           {% if registro.estagio == 'ST' %} Secundária Tardia  {% elif %}
+           {% if registro.estagio == 'U' %} Umbrófila  {% elif %}
+           {% if registro.estagio == 'S' %} Secundária  {% elif %}
+           {% if registro.estagio == 'C' %} Climácica   {% else %}
                 {{registro.estagio}}
-          {% endif %}
+           {% endif %}
 
       </th>
       <td>{{registro.formacao_florestal}}</td>
