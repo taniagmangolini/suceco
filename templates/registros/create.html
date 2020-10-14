@@ -3,7 +3,7 @@
  <div class="card border-0 shadow my-5">
     <div class="card-body p-5">
 		<h3> Cadastro de Registro</h3>
-		<div class="row">
+		<div id="reg_unico" class="row">
 		  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<form method="POST" >  {% csrf_token %}
 			    {% for field in form.visible_fields %}
@@ -18,9 +18,9 @@
 			     </br>
 			     <button type="submit" class="btn btn-primary">Adicionar</button>
 			  </form>
-			  <a href="/registros/">Voltar</a>
 		  </div>
 		</div>
+		<a href="/registros/">Voltar</a>
   </div>
 </div>
 {% endblock %}

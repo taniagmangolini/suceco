@@ -5,7 +5,8 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404,get_list_or_404
 from .models import Registro
 from especies.models import Especie
-from .forms import RegistroForm
+from formacaoflorestal.models import FormacaoFlorestal
+from .forms import RegistroForm, RegistroLoteForm
 from django.contrib.auth.decorators import login_required
 
 import logging
@@ -49,9 +50,11 @@ def search(request, id=None):
 @login_required
 def create(request):
     form = RegistroForm()
+    logger.info("Lote:")
+    logger.info(request.POST.get('dados_lote', None))
     try:
         if request.method == 'POST':
-            logger.info('POST')
+            logger.info('POST''')
             form = RegistroForm(request.POST)
             if form.is_valid():
                 form.save()
@@ -65,6 +68,81 @@ def create(request):
         logger.info(form)
         logger.info("=>>>> Erro ao criar registros")
         return render(request, 'registros/create.html', {'form' : form})
+
+@login_required
+def create_lote(request):
+    form = RegistroLoteForm()
+    registro = Registro()
+    dados_lote =  request.POST.get('dados_lote', '')
+    vegetacao_nome =  request.POST.get('formacao_florestal', '')
+    estado = request.POST.get('estado', '')
+    referencia = request.POST.get('referencia', '')
+    detalhes = request.POST.get('detalhes', '')
+    especies_estagios = []
+
+    try :
+        if dados_lote == '' :
+            return render(request, 'registros/create_lote.html', {'form' : form})
+        else:
+
+            try :
+                vegetacao = FormacaoFlorestal.objects.get(nome=vegetacao_nome)
+                logger.info('formacao: ' + vegetacao.nome)
+            except FormacaoFlorestal.DoesNotExist :
+                vegetacao = None
+
+            especies_estagios = str.split(dados_lote, ',')
+            logger.info(especies_estagios)
+
+            for i in especies_estagios:
+                logger.info(i)
+                especie = None
+                especie_estagio = str.split(i, ':')
+                estagio = ''
+                especie_nome = ''
+
+                try:
+                    logger.info(especie_estagio[0])
+                    logger.info(especie_estagio[1])
+                    especie_nome = especie_estagio[0].strip()
+                    estagio = especie_estagio[1].strip()
+                except:
+                    logger.info('split error')
+
+                if  estagio != '' and especie_nome != '':
+                    try:
+                        especie  =  Especie.objects.get(nome=especie_nome)
+                        logger.info('especie: ' + especie.nome)
+                    except:
+                        if (especie == None):
+                            new_especie = Especie()
+                            new_especie.nome =  especie_nome
+                            new_especie.save()
+                            logger.info('especie add: ' +  especie_nome)
+                            especie = Especie.objects.get(nome=especie_nome)
+
+                logger.info('especie: ' + especie.nome)
+                logger.info('vegetacao: ' + vegetacao.nome)
+
+                if(especie != None and vegetacao != None):
+                    logger.info('creating registro')
+                    registro = Registro()
+                    registro.especie = especie
+                    registro.estagio = estagio
+                    registro.formacao_florestal = vegetacao
+                    registro.estado = estado
+                    registro.referencia = referencia
+                    registro.detalhes = detalhes
+                    logger.info('saving')
+                    registro.save()
+                    logger.info('saved')
+
+        return HttpResponseRedirect('/registros/')
+    except:
+        logger.info("=>>>> Erro ao criar registros")
+        return render(request, 'registros/create_lote.html', {'form' : form})
+
+
 
 @login_required
 def edit(request, id, template_name='registros/edit.html') :

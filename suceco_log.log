@@ -881,3 +881,1609 @@ False
 >>>edit registros: 38ba8125-ecba-4cea-ac43-7d698e23b960
 Registro object (38ba8125-ecba-4cea-ac43-7d698e23b960)
 True
+<tr><th><label for="id_id">Id:</label></th><td><input type="text" name="id" value="159407c5-5f8b-4f34-8d3e-0787315f83ef" readonly="readonly" required id="id_id"><input type="hidden" name="initial-id" value="159407c5-5f8b-4f34-8d3e-0787315f83ef" id="initial-id_id"><br><span class="helptext">Id</span></td></tr>
+<tr><th><label for="id_especie">Especie:</label></th><td><select name="especie" required id="id_especie">
+  <option value="" selected>---------</option>
+
+  <option value="f367376a-301a-4466-91f3-2e24322493a4">Allophylus edulis</option>
+
+  <option value="8fd6b6cd-d18b-42b3-87b0-243e880be273">Coffea arabica</option>
+
+  <option value="71f5bf41-62bd-4f8e-9342-5060450ee77f">Cupania oblongifolia</option>
+
+  <option value="b4329f8f-b468-42ca-96e9-9de2edf2ccb3">Euterpe edulis</option>
+
+</select><br><span class="helptext">Espécie</span></td></tr>
+<tr><th><label for="id_estagio">Estagio:</label></th><td><select name="estagio" required id="id_estagio">
+  <option value="" selected>---------</option>
+
+  <option value="Pioneira">Pioneira</option>
+
+  <option value="Secundária Inicial">Secundária Inicial</option>
+
+  <option value="Secundária Tardia">Secundária Tardia</option>
+
+  <option value="Umbrófila">Umbrófila</option>
+
+  <option value="Secundária">Secundária</option>
+
+  <option value="Climácica">Climácica</option>
+
+</select><br><span class="helptext">Estágio Sucessional</span></td></tr>
+<tr><th><label for="id_formacao_florestal">Formacao florestal:</label></th><td><select name="formacao_florestal" required id="id_formacao_florestal">
+  <option value="" selected>---------</option>
+
+  <option value="fb5b7d38-f736-4b0f-a960-bb41389aeb0e">Floresta Ombrófila Densa Montana</option>
+
+</select><br><span class="helptext">Formação Florestal</span></td></tr>
+<tr><th><label for="id_estado">Estado:</label></th><td><select name="estado" required id="id_estado">
+  <option value="" selected>---------</option>
+
+  <option value="AC">AC</option>
+
+  <option value="AL">AL</option>
+
+  <option value="AP">AP</option>
+
+  <option value="AM">AM</option>
+
+  <option value="BA">BA</option>
+
+  <option value="CE">CE</option>
+
+  <option value="DF">DF</option>
+
+  <option value="ES">ES</option>
+
+  <option value="GO">GO</option>
+
+  <option value="MA">MA</option>
+
+  <option value="MG">MG</option>
+
+  <option value="MT">MT</option>
+
+  <option value="MS">MS</option>
+
+  <option value="PA">PA</option>
+
+  <option value="PE">PE</option>
+
+  <option value="PB">PB</option>
+
+  <option value="PI">PI</option>
+
+  <option value="PR">PR</option>
+
+  <option value="RJ">RJ</option>
+
+  <option value="RN">RN</option>
+
+  <option value="RR">RR</option>
+
+  <option value="RS">RS</option>
+
+  <option value="RO">RO</option>
+
+  <option value="SC">SC</option>
+
+  <option value="SE">SE</option>
+
+  <option value="SP">SP</option>
+
+  <option value="TO">TO</option>
+
+</select><br><span class="helptext">Estado</span></td></tr>
+<tr><th><label for="id_status">Status:</label></th><td><select name="status" id="id_status">
+  <option value="Ativo" selected>Ativo</option>
+
+  <option value="Inativo">Inativo</option>
+
+</select><br><span class="helptext">Status</span></td></tr>
+<tr><th><label for="id_referencia">Referencia:</label></th><td><input type="text" name="referencia" maxlength="1000" required id="id_referencia"><br><span class="helptext">Referência</span></td></tr>
+<tr><th><label for="id_detalhes">Detalhes:</label></th><td><input type="text" name="detalhes" maxlength="1000" required id="id_detalhes"><br><span class="helptext">Detalhes</span></td></tr>
+=>>>> Erro ao criar registros
+Lote:
+Lote:
+Lote:
+Lote:
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+Lote:
+None
+POST
+* id
+  * Este campo é obrigatório.
+* especie
+  * Este campo é obrigatório.
+* estagio
+  * Este campo é obrigatório.
+* status
+  * Este campo é obrigatório.
+Lote:
+None
+POST
+* id
+  * Este campo é obrigatório.
+* especie
+  * Este campo é obrigatório.
+* estagio
+  * Este campo é obrigatório.
+* status
+  * Este campo é obrigatório.
+Lote:
+None
+POST
+* id
+  * Este campo é obrigatório.
+* especie
+  * Este campo é obrigatório.
+* estagio
+  * Este campo é obrigatório.
+* status
+  * Este campo é obrigatório.
+Lote:
+None
+Lote:
+None
+Lote:
+None
+None
+Lote:
+None
+None
+Lote:
+None
+None
+Lote:
+None
+None
+Lote:
+None
+None
+Lote:
+None
+None
+Lote:
+None
+None
+None
+None
+None
+None
+None
+None
+None
+fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+SP
+fsfsd
+sfsfd
+None
+lote:
+veg:fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+est:SP
+ref:fsfsd
+det:sfsfd
+None
+lote:
+veg:fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+est:SP
+ref:referencia
+det:publicacao
+None
+lote:
+veg:fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+est:AM
+ref:reffff
+det:pubbb
+lote:
+veg:fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+est:AM
+ref:reffff
+det:pubbb
+lote:
+veg:fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+est:AM
+ref:reffff
+det:pubbb
+lote:
+veg:fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+est:AM
+ref:reffff
+det:pubbb
+=>>>> Erro ao criar registros
+lote:
+veg:fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+est:AM
+ref:reffff
+det:pubbb
+lote:
+veg:fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+est:AM
+ref:reffff
+det:pubbb
+lote:
+veg:fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+est:AM
+ref:reffff
+det:pubbb
+=>>>> Erro ao criar registros
+lote:
+veg:fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+est:AM
+ref:reffff
+det:pubbb
+lote:
+veg:fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+est:AM
+ref:reffff
+det:pubbb
+lote:
+veg:fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+est:AM
+ref:reffff
+det:pubbb
+lote:
+veg:fb5b7d38-f736-4b0f-a960-bb41389aeb0e
+est:AM
+ref:reffff
+det:pubbb
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:
+veg:
+est:
+ref:
+det:
+lote:teste,
+teste2
+veg:Floresta Ombrófila Densa Montana
+est:MG
+ref:jfdsfsd
+det:aaaaaaa
+<tr><th><label for="id_referencia">Referencia:</label></th><td><input type="text" name="referencia" maxlength="1000" required id="id_referencia"></td></tr>
+<tr><th><label for="id_detalhes">Detalhes:</label></th><td><input type="text" name="detalhes" maxlength="1000" required id="id_detalhes"></td></tr>
+<tr><th><label for="id_dados_lote">Dados lote:</label></th><td><textarea name="dados_lote" cols="40" rows="10" maxlength="1000" required id="id_dados_lote">
+</textarea></td></tr>
+<tr><th><label for="id_formacao_florestal">Formacao florestal:</label></th><td><select name="formacao_florestal" required id="id_formacao_florestal">
+  <option value="" selected>Selecione a Formação Florestal</option>
+
+  <option value="Floresta Ombrófila Densa Montana">Floresta Ombrófila Densa Montana</option>
+
+</select></td></tr>
+<tr><th><label for="id_estado">Estado:</label></th><td><select name="estado" id="id_estado">
+  <option value="AC">AC</option>
+
+  <option value="AL">AL</option>
+
+  <option value="AP">AP</option>
+
+  <option value="AM">AM</option>
+
+  <option value="BA">BA</option>
+
+  <option value="CE">CE</option>
+
+  <option value="DF">DF</option>
+
+  <option value="ES">ES</option>
+
+  <option value="GO">GO</option>
+
+  <option value="MA">MA</option>
+
+  <option value="MG">MG</option>
+
+  <option value="MT">MT</option>
+
+  <option value="MS">MS</option>
+
+  <option value="PA">PA</option>
+
+  <option value="PE">PE</option>
+
+  <option value="PB">PB</option>
+
+  <option value="PI">PI</option>
+
+  <option value="PR">PR</option>
+
+  <option value="RJ">RJ</option>
+
+  <option value="RN">RN</option>
+
+  <option value="RR">RR</option>
+
+  <option value="RS">RS</option>
+
+  <option value="RO">RO</option>
+
+  <option value="SC">SC</option>
+
+  <option value="SE">SE</option>
+
+  <option value="SP">SP</option>
+
+  <option value="TO">TO</option>
+
+</select></td></tr>
+=>>>> Erro ao criar registros
+['Teste:Pioneira', '\r\nTeste1:Secundária Inicial', '\r\nTeste2: Secundária Tardia']
+Teste:Pioneira
+=>>>> Erro ao criar registros
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial']
+Teste1:Pioneira
+=>>>> Erro ao criar registros
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial']
+Teste1:Pioneira
+=>>>> Erro ao criar registros
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial', '\r\n']
+Teste1:Pioneira
+=>>>> Erro ao criar registros
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial', '\r\n']
+Teste1:Pioneira
+Teste1
+Pioneira
+=>>>> Erro ao criar registros
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial']
+Teste1:Pioneira
+Teste1
+Pioneira
+=>>>> Erro ao criar registros
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial']
+Teste1:Pioneira
+Teste1
+Pioneira
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial']
+Teste1:Pioneira
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial']
+Teste1:Pioneira
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial']
+Teste1:Pioneira
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial']
+Teste1:Pioneira
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial']
+Teste1:Pioneira
+especie add: Teste1
+Teste1
+Pioneira
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial']
+Teste1:Pioneira
+Teste1
+Pioneira
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial']
+Teste1:Pioneira
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial']
+Teste1:Pioneira
+
+Teste2:Secundária Inicial
+especie add: Teste2
+['Teste1:Pioneira']
+Teste1:Pioneira
+['Teste1:Pioneira']
+Teste1:Pioneira
+['Teste1:Pioneira']
+Teste1:Pioneira
+['Teste1:Pioneira']
+Teste1:Pioneira
+especie: Teste1
+['Teste1:Pioneira', '']
+Teste1:Pioneira
+especie: Teste1
+
+['Teste1:Pioneira', '\r\nTeste2:Pioneira']
+Teste1:Pioneira
+especie: Teste1
+
+Teste2:Pioneira
+especie: Teste2
+['Teste1:Pioneira', '\r\nTeste2:Pioneira']
+Teste1:Pioneira
+especie: Teste1
+
+Teste2:Pioneira
+especie: Teste2
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial']
+Teste1:Pioneira
+especie: Teste1
+
+Teste2:Secundária Inicial
+especie: Teste2
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial']
+Teste1:Pioneira
+especie: Teste1
+especie: Teste1
+
+Teste2:Secundária Inicial
+especie: Teste2
+especie: Teste2
+['Teste1:Pioneira', '\r\nTeste2:Secundária Inicial']
+Teste1:Pioneira
+especie: Teste1
+especie: Teste1
+formacao: Floresta Ombrófila Densa Montana
+Teste1
+Pioneira
+saving
+saved
+
+Teste2:Secundária Inicial
+especie: Teste2
+especie: Teste2
+formacao: Floresta Ombrófila Densa Montana
+Teste2
+Secundária Inicial
+saving
+saved
+Lote:
+None
+Lote:
+None
+Lote:
+None
+['Teste3:Pioneira', '\r\nTeste4:Secundária Inicial']
+Teste3:Pioneira
+especie add: Teste3
+especie: Teste3
+especie: Teste3
+formacao: Floresta Ombrófila Densa Montana
+Teste3
+Pioneira
+saving
+saved
+['Teste4:Secundária Inicial', '\r\nTeste5:Pioneira']
+Teste4:Secundária Inicial
+especie add: Teste4
+especie: Teste4
+especie: Teste4
+formacao: Floresta Ombrófila Densa Montana
+Teste4
+Secundária Inicial
+saving
+saved
+
+Teste5:Pioneira
+especie add: Teste5
+especie: Teste5
+especie: Teste5
+formacao: Floresta Ombrófila Densa Montana
+Teste5
+Pioneira
+saving
+saved
+['Teste6:Pioneira', '\r\nTeste7:Secundária Tardia', '']
+Teste6:Pioneira
+especie add: Teste6
+especie: Teste6
+especie: Teste6
+formacao: Floresta Ombrófila Densa Montana
+Teste6
+Pioneira
+saving
+saved
+
+Teste7:Secundária Tardia
+especie add: Teste7
+especie: Teste7
+especie: Teste7
+formacao: Floresta Ombrófila Densa Montana
+Teste7
+Secundária Tardia
+saving
+saved
+
+=>>>> Erro ao criar registros
+formacao: Floresta Ombrófila Densa Montana
+['Teste6:Pioneira', '\r\nTeste7:Secundária Tardia', '']
+Teste6:Pioneira
+especie: Teste6
+
+Teste7:Secundária Tardia
+especie: Teste7
+
+split error
+formacao: Floresta Ombrófila Densa Montana
+['Teste7:Pioneira', '\r\nTeste8:Pioneira', '']
+Teste7:Pioneira
+especie: Teste7
+
+Teste8:Pioneira
+especie add: Teste8
+especie: Teste8
+
+split error
+formacao: Floresta Ombrófila Densa Montana
+['Espécie:Pioneira', '\r\nEspecie2:Secundária Inicial', '']
+Espécie:Pioneira
+especie add: Espécie
+especie: Espécie
+
+Especie2:Secundária Inicial
+especie add: Especie2
+especie: Especie2
+
+split error
+formacao: Floresta Ombrófila Densa Montana
+['Especie3:Pioneira', '\r\nEspecie4:Secundária Inicial', '']
+Especie3:Pioneira
+Especie3
+split error
+
+Especie4:Secundária Inicial
+
+Especie4
+split error
+
+
+split error
+formacao: Floresta Ombrófila Densa Montana
+['EspécieX:Pioneira', '\r\nEspécieY:Secundária Inicial']
+EspécieX:Pioneira
+EspécieX
+split error
+
+EspécieY:Secundária Inicial
+
+EspécieY
+split error
+formacao: Floresta Ombrófila Densa Montana
+['EspecieA:Pioneira', '\r\nEspecieB:Secundaria Inicial', '']
+EspecieA:Pioneira
+EspecieA
+Pioneira
+especie add: EspecieA
+especie: EspecieA
+
+EspecieB:Secundaria Inicial
+
+EspecieB
+Secundaria Inicial
+especie add: EspecieB
+especie: EspecieB
+
+
+split error
+formacao: Floresta Ombrófila Densa Montana
+['EspecieC:Pioneira', '\r\nEspecieD:Secundária Inicial']
+EspecieC:Pioneira
+EspecieC
+Pioneira
+especie add: EspecieC
+especie: EspecieC
+
+EspecieD:Secundária Inicial
+
+EspecieD
+Secundária Inicial
+especie add: EspecieD
+especie: EspecieD
+formacao: Floresta Ombrófila Densa Montana
+['EspecieE:Pioneira', '\r\nEspecieF:Secundária Inicial']
+EspecieE:Pioneira
+EspecieE
+Pioneira
+especie add: EspecieE
+especie: EspecieE
+
+EspecieF:Secundária Inicial
+
+EspecieF
+Secundária Inicial
+especie add: EspecieF
+especie: EspecieF
+formacao: Floresta Ombrófila Densa Montana
+['EspecieG:Pioneira', '\r\nEspecieH:Secundária Inicial']
+EspecieG:Pioneira
+EspecieG
+Pioneira
+especie add: EspecieG
+especie: EspecieG
+=>>>> Erro ao criar registros
+formacao: Floresta Ombrófila Densa Montana
+['EspecieG:Pioneira', '\r\nEspecieH:Secundária Inicial']
+EspecieG:Pioneira
+EspecieG
+Pioneira
+especie: EspecieG
+especie: EspecieG
+vegetacao: Floresta Ombrófila Densa Montana
+creating registro
+saving
+saved
+
+EspecieH:Secundária Inicial
+
+EspecieH
+Secundária Inicial
+especie add: EspecieH
+especie: EspecieH
+vegetacao: Floresta Ombrófila Densa Montana
+creating registro
+saving
+saved
+formacao: Floresta Ombrófila Densa Montana
+['Tania:Pioneira', '\r\nTania2:Secundária Inicial', '\r\nTania3: Secundária Tardia']
+Tania:Pioneira
+Tania
+Pioneira
+especie add: Tania
+especie: Tania
+vegetacao: Floresta Ombrófila Densa Montana
+creating registro
+saving
+saved
+
+Tania2:Secundária Inicial
+
+Tania2
+Secundária Inicial
+especie add: Tania2
+especie: Tania2
+vegetacao: Floresta Ombrófila Densa Montana
+creating registro
+saving
+saved
+
+Tania3: Secundária Tardia
+
+Tania3
+ Secundária Tardia
+especie add: Tania3
+especie: Tania3
+vegetacao: Floresta Ombrófila Densa Montana
+creating registro
+saving
+saved
+formacao: Floresta Ombrófila Densa Montana
+['Tania4:Pioneira', '\r\nTania5:Umbrófila', '\r\nTania6:Secundária Tardia', '']
+Tania4:Pioneira
+Tania4
+Pioneira
+especie add: Tania4
+especie: Tania4
+vegetacao: Floresta Ombrófila Densa Montana
+creating registro
+saving
+saved
+
+Tania5:Umbrófila
+
+Tania5
+Umbrófila
+especie add: Tania5
+especie: Tania5
+vegetacao: Floresta Ombrófila Densa Montana
+creating registro
+saving
+saved
+
+Tania6:Secundária Tardia
+
+Tania6
+Secundária Tardia
+especie add: Tania6
+especie: Tania6
+vegetacao: Floresta Ombrófila Densa Montana
+creating registro
+saving
+saved
+
+
+split error
+=>>>> Erro ao criar registros
