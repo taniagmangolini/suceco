@@ -6,8 +6,8 @@ from django.forms import ModelChoiceField
 
 class RegistroForm(forms.ModelForm):
     class Meta:
-
         model = Registro
+        ordering = ['especie']
         fields = '__all__'
         help_texts = {'id': ('Id'),
                       'especie' : ('Espécie'),
