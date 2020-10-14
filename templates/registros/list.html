@@ -3,11 +3,11 @@
   <div class="card border-0 shadow my-5">
 
     <div class="card-body p-5">
-
+    <div class="card-body p-5">
             <form action="{% url 'search_regs_by_sp' %}" method="post">
 						<div class="form-group">
                             <label> Espécie:</label>
-                            <select name=id_especie class="form-control">
+                            <select id="select_especie" name=id_especie class="form-control">
                                 {% for sp in especies_list %}
                                    {% if especie_selected.id != sp.id %}
                                         <option value="{{sp.id}}">{{sp.nome}}</option>

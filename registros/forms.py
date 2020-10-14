@@ -18,7 +18,7 @@ class RegistroForm(forms.ModelForm):
                       'detalhes' : ('Detalhes'),
                       'referencia': ('Referência')}
         widgets = {'id' : forms.TextInput(attrs={'readonly' : 'readonly'}),
-                    'especies_list': forms.HiddenInput  }
+                    'especies_list': forms.HiddenInput                  }
 
         def __init__(self, *args, **kwargs) :
             super(RegistroForm, self).__init__(*args, **kwargs)
