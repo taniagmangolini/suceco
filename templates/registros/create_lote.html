@@ -7,7 +7,7 @@
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<form method="POST" >  {% csrf_token %}
 			<div class="form-group">
-    			<label>Espécies e Estágios Sucessionais: </label>
+    			<label>Espécies e Estágios Sucessionais (Exemplo: <i>Euterpe edulis:Secundária Inicial,</i>): </label>
 				</br>
 	  			{{ field.dados_lote.errors }}
 	  			{{form.dados_lote}}
