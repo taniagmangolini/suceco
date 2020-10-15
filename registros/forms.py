@@ -17,6 +17,7 @@ class RegistroLoteForm(forms.Form):
                                                                        to_field_name='nome',
                                                                        empty_label="Selecione a Formação Florestal")
             self.fields['estado'] = forms.ChoiceField(choices=(
+        ('Selecione o Estado', 'Selecione o Estado'),
         ('AC', 'AC'),
         ('AL', 'AL'),
         ('AP', 'AP'),
