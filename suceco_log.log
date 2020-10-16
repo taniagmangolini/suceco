@@ -2487,3 +2487,108 @@ saved
 
 split error
 =>>>> Erro ao criar registros
+sending msg 
+message mensagem oi
+assunto Teste
+email teste@gmail.com
+EMAIL_HOST_USER sucecodb@gmail.com
+EMAIL_HOST smtp.gmail.com
+error sending msg
+sending msg 
+message Oi
+assunto Teste
+email dfsjdfk@dd.com
+EMAIL_HOST_USER sucecodb@gmail.com
+EMAIL_HOST smtp.gmail.com
+error sending msg
+sending msg 
+message fdsfds
+assunto Teste
+email dfsjdfk@dd.com
+EMAIL_HOST_USER sucecodb@gmail.com
+EMAIL_HOST smtp.gmail.com
+EMAIL_PORT 587
+EMAIL_HOST_PASSWORD Darwin2020!
+EMAIL_HOST_PASSWORD Darwin2020!
+error sending msg
+sending msg 
+message fdsfdsfdsfsd
+assunto Teste
+email dfsjdfk@dd.com
+EMAIL_HOST_USER sucecodb@gmail.com
+EMAIL_HOST smtp.gmail.com
+EMAIL_PORT 587
+EMAIL_HOST_PASSWORD Darwin2020!
+error sending msg
+sending msg 
+message oi
+assunto Teste
+email dfsjdfk@dd.com
+EMAIL_HOST_USER sucecodb@gmail.com
+EMAIL_HOST smtp.gmail.com
+EMAIL_PORT 587
+EMAIL_HOST_PASSWORD Darwin2020!
+error sending msg
+sending msg 
+message Oi
+assunto Teste
+email dfsjdfk@dd.com
+EMAIL_HOST_USER sucecodb@gmail.com
+EMAIL_HOST smtp.gmail.com
+EMAIL_PORT 587
+EMAIL_HOST_PASSWORD Darwin2020!
+error sending msg
+sending msg 
+message gfdgdfg
+assunto Teste
+email dfsjdfk@dd.com
+EMAIL_HOST_USER sucecodb@gmail.com
+EMAIL_HOST smtp.gmail.com
+EMAIL_PORT 587
+EMAIL_HOST_PASSWORD Darwin2020!
+error sending msg
+sending msg 
+message gfdgdfg
+assunto Teste
+email dfsjdfk@dd.com
+EMAIL_HOST_USER sucecodb@gmail.com
+EMAIL_HOST smtp.gmail.com
+EMAIL_PORT 587
+EMAIL_HOST_PASSWORD Darwin2020!
+error sending msg
+sending msg 
+message oi
+assunto Teste
+email dfsjdfk@dd.com
+EMAIL_HOST_USER sucecodb@gmail.com
+EMAIL_HOST smtp.gmail.com
+EMAIL_PORT 587
+EMAIL_HOST_PASSWORD Darwin2020!
+error sending msg
+sending msg 
+message gdgd
+assunto Teste
+email misticetos2020@gmail.com
+EMAIL_HOST_USER sucecodb@gmail.com
+EMAIL_HOST smtp.gmail.com
+EMAIL_PORT 465
+EMAIL_HOST_PASSWORD Darwin2020!
+error sending msg
+sending msg 
+message dfsfdsf
+assunto Teste
+email dfsjdfk@dd.com
+EMAIL_HOST_USER sucecodb@gmail.com
+EMAIL_HOST smtp.gmail.com
+EMAIL_PORT 465
+EMAIL_HOST_PASSWORD Darwin2020!
+error sending msg
+sending msg 
+message fdsfdsf
+assunto Teste
+email dfsjdfk@dd.com
+EMAIL_HOST_USER sucecodb@gmail.com
+EMAIL_HOST smtp.gmail.com
+EMAIL_PORT 587
+EMAIL_HOST_PASSWORD Darwin2020!
+msg sent 

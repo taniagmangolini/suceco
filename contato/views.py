@@ -25,8 +25,7 @@ def mandar_mensagem(request):
 
             logger.info('EMAIL_HOST_USER ' +  settings.EMAIL_HOST_USER)
             logger.info('EMAIL_HOST ' +  settings.EMAIL_HOST)
-            logger.info('EMAIL_PORT ' +  settings.EMAIL_PORT)
-            logger.info('EMAIL_HOST_PASSWORD ' +  settings.EMAIL_HOST_PASSWORD)
+            logger.info('EMAIL_PORT ' +  str(settings.EMAIL_PORT))
             logger.info('EMAIL_HOST_PASSWORD ' +  settings.EMAIL_HOST_PASSWORD)
 
             send_mail(

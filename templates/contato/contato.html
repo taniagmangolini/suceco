@@ -5,7 +5,7 @@
 		<h3> Contato </h3>
 		<div class="row" >
 			<div style="color:blue">
-			{% if msg != ''%} {{msg}} {% endif %}
+				<p>{% if msg != ''%} {{msg}} {% endif %}</p>
 			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<form method="POST">  {% csrf_token %}
