@@ -18,7 +18,7 @@
                                 {% endfor %}
                             </select>
 						</div>
-                        <input type="button" class="btn btn-success" name="submit" value="Procurar"  />
+                        <input type="submit" class="btn btn-success" name="submit" value="Procurar"  />
             </form>
         {% if request.user.is_authenticated%}
              <div>
@@ -29,7 +29,7 @@
             </br>
            <div>
                     <a href="{% url 'create_lote' %}">
-                        <button type="submit" class="btn btn-success"> Novo Lote de Registros </button>
+                        <button type="button" class="btn btn-success"> Novo Lote de Registros </button>
                     </a>
            </div>
         {% endif %}
