@@ -7,6 +7,7 @@ from suceco import settings
 def mandar_mensagem(request):
     form = ContatoForm()
     template_name = 'contato/contato.html'
+    contexto = {  }
 
     try:
         assunto = request.POST.get('assunto', '')
