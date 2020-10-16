@@ -7,7 +7,7 @@ from suceco import settings
 def mandar_mensagem(request):
     form = ContatoForm()
     template_name = 'contato/contato.html'
-    contexto = {  }
+    contexto = {'form' : form  }
 
     try:
         assunto = request.POST.get('assunto', '')
@@ -24,6 +24,7 @@ def mandar_mensagem(request):
                 fail_silently=False,
             )
             contexto = {
+                'form' : form,
                 'msg' : 'Mensagem enviada',
             }
 
@@ -31,6 +32,7 @@ def mandar_mensagem(request):
 
     except:
         contexto = {
+            'form' : form,
             'msg' : 'Erro ao enviar mensagem',
         }
         return render(request, template_name, contexto)
