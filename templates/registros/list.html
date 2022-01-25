@@ -6,7 +6,7 @@
         <row><col-md-12>
             <form action="{% url 'search_regs_by_sp' %}" method="post">
 						<div class="form-group">
-                            <select name=id_especie class="form-control">
+                            <select id="select_especie" name=id_especie class="form-control">
                                 <option value="" disabled selected>Selecione a espécie</option>
                                 {% for sp in especies_list %}
                                    {% if especie_selected.id != sp.id %}
