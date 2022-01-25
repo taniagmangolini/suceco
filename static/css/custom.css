@@ -6,13 +6,18 @@ body {
   -o-background-size: cover;
 }
 
-.nav a{
+.navbar-nav a{
     color: gray !important;
-    font-size: 0.75em !important;
+    font-size: 1.25em !important;
 }
 
+.card-body span {
+    font-size: 1em;
+}
+
+
 .list-group-item {
-  font-size: 12px;
+  font-size: 0.75em;
 }
 
 .small-font-size{

@@ -6,27 +6,24 @@ body {
   -o-background-size: cover;
 }
 
-.navbar {
-    background-color: white;
-	font-size: 30px;
-	color: black;
-
+.navbar-nav a{
+    color: gray !important;
+    font-size: 1.25em !important;
 }
 
-.navbar .navbar-brand {
-    color: black;
+.card-body span {
+    font-size: 1em;
 }
-.titulo{
-	  color: black;
-}
+
 
 .list-group-item {
-  font-size: 12px;
+  font-size: 0.75em;
 }
 
 .small-font-size{
-  font-size: 10px;
+  font-size: 12px;
 }
+
 
 .nopadding {
    padding: 0 px;

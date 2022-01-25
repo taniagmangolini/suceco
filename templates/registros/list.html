@@ -3,11 +3,11 @@
   <div class="card border-0 shadow my-5">
 
     <div class="card-body p-5">
-    <div class="card-body p-5">
+        <row><col-md-12>
             <form action="{% url 'search_regs_by_sp' %}" method="post">
 						<div class="form-group">
-                            <label> Espécie:</label>
-                            <select id="select_especie" name=id_especie class="form-control">
+                            <select name=id_especie class="form-control">
+                                <option value="" disabled selected>Selecione a espécie</option>
                                 {% for sp in especies_list %}
                                    {% if especie_selected.id != sp.id %}
                                         <option value="{{sp.id}}">{{sp.nome}}</option>
@@ -20,6 +20,7 @@
 						</div>
                         <input type="submit" class="btn btn-success" name="submit" value="Procurar"  />
             </form>
+        </col-md-12></row>
         {% if request.user.is_authenticated%}
              <div>
                     <a href="{% url 'create_registro' %}">
@@ -34,13 +35,13 @@
            </div>
         {% endif %}
     </br>
-   {% if especie_selected  %}
-        <h5> {{nr_registros}} resultados para a espécie <i> {{especie_selected.nome}} </i>  </h5>
+   {% if especie_selected and nr_registros == 0 %}
+        <span class="lead"> Nenhum resultado para <i> {{especie_selected.nome}} </i></span>
    {% endif %}
 
 {% if registros_list  %}
 <div class="table-responsive">
-<table class="table">
+<table class="table table-bordered table-condensed">
   <thead>
     <tr>
       <th scope="col">Classificação</th>
@@ -67,7 +68,7 @@
       <td>{{registro.estado}}</td>
       <td>
         <a href="{{ registro.referencia }}" target="_blank"  title="Link" ><i class="fa fa-link" aria-hidden="true"></i></a>
-        <a  href="#" onclick="mostrar_detalhe('{{registro.detalhes}}')"  title="Publicação" > <i class="fas fa-info-circle"></i></a>
+        <a href="#" class="open-details-dialog" data-detalhes="{{registro.detalhes}}" title="Publicação" ><i class="fas fa-info-circle"></i></a>
         {% if request.user.is_authenticated%}
             <a href="{% url 'edit_registro' registro.id%}" title="Editar"><i class="fa fa-edit" aria-hidden="true"></i></a>
             <a href="{% url 'delete_registro' registro.id%}" title="Excluir">  <i class="fas fa-trash-alt"> </i></a>
@@ -78,8 +79,21 @@
 </table>
 </div>
 {% endif %}
-
 </div>
 
+ <!-- pop up-->
+<div id="popup" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+          <p id="register-details"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">Fechar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
