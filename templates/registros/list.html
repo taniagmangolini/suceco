@@ -3,10 +3,9 @@
   <div class="card border-0 shadow my-5">
 
     <div class="card-body p-5">
-        <row><col-md-12>
             <form action="{% url 'search_regs_by_sp' %}" method="post">
-						<div class="form-group">
-                            <select id="select_especie" name=id_especie class="form-control">
+						<div class="form-group row">
+                            <select id="select_especie" name="id_especie" class="form-control">
                                 <option value="" disabled selected>Selecione a espécie</option>
                                 {% for sp in especies_list %}
                                    {% if especie_selected.id != sp.id %}
@@ -18,9 +17,10 @@
                                 {% endfor %}
                             </select>
 						</div>
-                        <input type="submit" class="btn btn-success" name="submit" value="Procurar"  />
+                        <div class="form-group row">
+                            <input type="submit" class="btn btn-success" name="submit" value="Procurar" />
+                        </div>
             </form>
-        </col-md-12></row>
         {% if request.user.is_authenticated%}
              <div>
                     <a href="{% url 'create_registro' %}">
