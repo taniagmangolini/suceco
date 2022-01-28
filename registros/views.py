@@ -7,6 +7,7 @@ from .models import Registro
 from especies.models import Especie
 from .forms import RegistroForm, RegistroLoteForm
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import logging
 
 logger = logging.getLogger(__name__)
@@ -40,20 +41,36 @@ def search(request, id=None):
     template_name = 'registros/list.html'
     id_especie = request.POST.get("id_especie")
     registros = ''
+    page_obj = None
+
+    if id_especie is None:
+        id_especie = request.session['id_especie']
 
     if id_especie != None:
+        print('ID ESPECIE', id_especie)
+        request.session['id_especie'] = id_especie
         registros = Registro.objects.filter(especie=id_especie)
         especie_selected = get_object_or_404(Especie, id=id_especie)
+
+        page = request.GET.get('page', 1)
+        paginator = Paginator(registros, 1)
+
+        try:
+            page_obj = paginator.page(page)
+        except PageNotAnInteger:
+            page_obj = paginator.page(1)
+        except EmptyPage:
+            page_obj = paginator.page(paginator.num_pages)
 
     contexto = {
         'especies_list' : especies_list,
         'registros_list': registros,
-        'id_especie': None,
+        'id_especie': id_especie,
         'especie_selected' : especie_selected,
-        'nr_registros' : len(registros)
+        'nr_registros' : len(registros),
+        'page_obj' : page_obj
     }
-    return render(request, template_name , contexto )
-
+    return render(request, template_name , contexto)
 
 @login_required
 def create(request):
