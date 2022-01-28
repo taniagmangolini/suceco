@@ -52,7 +52,7 @@ def search(request, id=None):
         registros = Registro.objects.filter(especie=id_especie)
         especie_selected = get_object_or_404(Especie, id=id_especie)
 
-        page = request.GET.get('page', 1)
+        page = request.GET.get('page', 10)
         paginator = Paginator(registros, 1)
 
         try:
