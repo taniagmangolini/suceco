@@ -7,3 +7,6 @@ class ContatoForm(forms.Form):
 
         def __init__(self, *args, **kwargs) :
             super(ContatoForm, self).__init__(*args, **kwargs)
+            self.fields['email'].widget.attrs['style'] = 'width:100%;'
+            self.fields['assunto'].widget.attrs['style'] = 'width:100%;'
+            self.fields['mensagem'].widget.attrs['style'] = 'width:100%;'
