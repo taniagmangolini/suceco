@@ -5,7 +5,6 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404,get_list_or_404
 from .models import Registro
 from especies.models import Especie
-from formacaoflorestal.models import FormacaoFlorestal
 from .forms import RegistroForm, RegistroLoteForm
 from django.contrib.auth.decorators import login_required
 import logging
