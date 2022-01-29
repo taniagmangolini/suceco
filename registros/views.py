@@ -156,9 +156,7 @@ def export_csv(request):
     :param id:
     :return: csv file
     '''
-
     id_especie =  request.session['id_especie']
-
     especie = Especie.objects.get(pk=id_especie)
 
     response = HttpResponse(content_type='text/csv')
