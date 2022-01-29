@@ -32,7 +32,7 @@ def mandar_mensagem(request):
                 assunto,
                 (mensagem + '. Email contato: ' + email_contato),
                 settings.EMAIL_HOST_USER,
-                [settings.EMAIL_HOST_USER],
+                [settings.EMAIL_DESTIONATION],
                 fail_silently=False,
             )
 
@@ -44,10 +44,11 @@ def mandar_mensagem(request):
 
         return render(request, template_name, contexto)
 
-    except:
-        logger.info('error sending msg')
+    except Exception as e:
+        logger.info('[ERRO] sending email')
+        logger.error(e)
         contexto = {
             'form' : form,
-            'msg' : 'Erro ao enviar mensagem',
+            'msg' : 'Não foi possível enviar a enviar mensagem.',
         }
         return render(request, template_name, contexto)
