@@ -168,7 +168,7 @@ def export_csv(request):
     if especie:
         registros = Registro.objects.select_related('especie') \
                                     .select_related('formacao_florestal') \
-                                    .all() \
+                                    .all(especie=id_especie) \
                                     .values_list('especie__nome',
                                                  'estagio',
                                                  'formacao_florestal__nome',
