@@ -32,7 +32,7 @@ def mandar_mensagem(request):
                 assunto,
                 (mensagem + '. Email contato: ' + email_contato),
                 settings.EMAIL_HOST_USER,
-                [settings.EMAIL_DESTIONATION],
+                [settings.EMAIL_DESTINATARIO],
                 fail_silently=False,
             )
 
