@@ -156,14 +156,25 @@ def export_csv(request):
     :param id:
     :return: csv file
     '''
-    response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="registros.csv"'
 
     id_especie =  request.session['id_especie']
+
+    especie = Especie.objects.get(pk=id_especie)
+
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename=' + especie.nome + '.csv'
     writer = csv.writer(response)
 
-    if id_especie:
-        registros = Registro.objects.filter(especie=id_especie).values_list()
+    if especie:
+        registros = Registro.objects.select_related('especie') \
+                                    .select_related('formacao_florestal') \
+                                    .filter(especie=id_especie) \
+                                    .values_list('especie__nome',
+                                                 'estagio',
+                                                 'formacao_florestal__nome',
+                                                 'estado',
+                                                 'detalhes',
+                                                 'referencia')
 
         for registro in registros :
             writer.writerow(registro)
