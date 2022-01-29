@@ -40,6 +40,9 @@
         </form>
         <!-- list of registers -->
         {% if registros_list  %}
+            <a href="{% url 'generate_csv' %}" title="Download" class="btn btn-default">
+                <i class="fas fa-download"></i>
+            </a>
             <div class="table-responsive">
                 <table class="table table-bordered table-condensed">
                     <thead>

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404,get_list_or_404
 from .models import Registro
@@ -9,6 +10,7 @@ from .forms import RegistroForm, RegistroLoteForm
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import logging
+import csv
 
 logger = logging.getLogger(__name__)
 
@@ -146,3 +148,20 @@ def delete(request, id, template_name='registros/delete.html'):
     except Exception as e:
         logger.info("[ERROR] deleting register")
         return render(request, template_name)
+
+def export_csv(request):
+    '''
+    :param request:
+    :param id:
+    :return: csv file
+    '''
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="registros.csv"'
+
+    writer = csv.writer(response)
+
+    users = Registro.objects.all().values_list()
+    for user in users:
+        writer.writerow(user)
+
+    return response
