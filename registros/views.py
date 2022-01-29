@@ -159,10 +159,13 @@ def export_csv(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="registros.csv"'
 
+    id_especie =  request.session['id_especie']
     writer = csv.writer(response)
 
-    users = Registro.objects.all().values_list()
-    for user in users:
-        writer.writerow(user)
+    if id_especie:
+        registros = Registro.objects.filter(especie=id_especie).values_list()
+
+        for registro in registros :
+            writer.writerow(registro)
 
     return response
