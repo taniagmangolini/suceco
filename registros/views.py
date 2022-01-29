@@ -149,6 +149,7 @@ def delete(request, id, template_name='registros/delete.html'):
         logger.info("[ERROR] deleting register")
         return render(request, template_name)
 
+
 def export_csv(request):
     '''
     :param request:
