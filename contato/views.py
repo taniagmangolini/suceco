@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .forms import ContatoForm
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
-from suceco import settingsz
+from suceco import settings
 import logging
 
 logger = logging.getLogger(__name__)
