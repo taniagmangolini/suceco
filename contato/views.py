@@ -7,7 +7,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
 def mandar_mensagem_old(request):
     form = ContatoForm()
     template_name = 'contato/contato.html'
@@ -35,21 +34,17 @@ def mandar_mensagem_old(request):
                 subject='SUCECO',
                 html_content= mensagem + '. Email contato: ' + email_contato)
 
-            try:
                 sg = SendGridAPIClient(settings.SENDGRID_API_KEY)
                 response = sg.send(message)
                 logger.info('msg sent ')
-                contexto = {
-                    'form' : form,
-                    'msg' : 'Mensagem enviada',
-                }
+                contexto = {'form' : form,
+                            'msg' : 'Mensagem enviada',
+                            }
 
-            except Exception as e:
-                logger.info('[ERRO] sending email')
-                logger.error(e)
-                contexto = {
-                    'form' : form,
-                    'msg' : 'Não foi possível enviar a enviar mensagem.',
-                }
+        except Exception as e:
+            logger.info('[ERRO] sending email')
+            logger.error(e)
+            contexto = {'form' : form,
+                        'msg' : 'Não foi possível enviar a enviar mensagem.',}
 
         return render(request, template_name, contexto)
