@@ -9,8 +9,10 @@ from especies.models import Especie
 from .forms import RegistroForm, RegistroLoteForm
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from suceco._constants import CLASS_TRANSLATOR, CLASS_COLOR
 import logging
 import csv
+import json
 
 logger = logging.getLogger(__name__)
 
@@ -34,9 +36,7 @@ def index(request) :
 @csrf_exempt
 def search(request, id=None):
     '''
-    :param request:
-    :param id:
-    :return: list of registers for the selected species
+    List of registers for the selected species
     '''
     especies_list = sorted(Especie.objects.all(), key=lambda x : x.nome)
     especie_selected = None
@@ -49,7 +49,6 @@ def search(request, id=None):
         id_especie = request.session['id_especie']
 
     if id_especie != None:
-        print('ID ESPECIE', id_especie)
         request.session['id_especie'] = id_especie
         registros = Registro.objects.filter(especie=id_especie)
         especie_selected = get_object_or_404(Especie, id=id_especie)
@@ -64,9 +63,12 @@ def search(request, id=None):
         except EmptyPage:
             page_obj = paginator.page(paginator.num_pages)
 
+    pie_chart_data_json = generate_pie_chart(registros)
+
     contexto = {
         'especies_list' : especies_list,
         'registros_list': registros,
+        'pie_chart' : json.dumps(pie_chart_data_json),
         'id_especie': id_especie,
         'especie_selected' : especie_selected,
         'nr_registros' : len(registros),
@@ -74,11 +76,44 @@ def search(request, id=None):
     }
     return render(request, template_name , contexto)
 
+
+def generate_pie_chart(registros):
+    '''
+    Generate a pie chart.
+    '''
+    pie_chart_data = {'Pioneira' :  0,
+                      'Secundária Inicial': 0,
+                      'Secundária Tardia': 0,
+                      'Umbrófila': 0,
+                      'Climácica': 0,
+                      'Secundária': 0}
+
+    for item in registros :
+        pie_chart_data[CLASS_TRANSLATOR.get(item.estagio)] += 1
+
+    labels = []
+    values = []
+    colors = []
+
+    for label, count in pie_chart_data.items():
+        if count > 0:
+            labels.append(label)
+            values.append(count)
+            colors.append(CLASS_COLOR.get(label))
+
+    pie_chart_data_json = {"labels": labels,
+                           "values": values,
+                           "colors": colors}
+
+    print(pie_chart_data_json)
+
+    return pie_chart_data_json
+
+
 @login_required
 def create(request):
     '''
-    :param request:
-    :return: a new register
+    Create a register.
     '''
     form = RegistroForm()
     logger.info(request.POST.get('dados_lote', None))
@@ -104,10 +139,7 @@ def create(request):
 @login_required
 def edit(request, id, template_name='registros/edit.html') :
     '''
-    :param request:
-    :param id:
-    :param template_name:
-    :return: form with the changed register
+    Updates a register.
     '''
     form = RegistroForm()
     logger.info('editing register' + id)
@@ -134,10 +166,7 @@ def edit(request, id, template_name='registros/edit.html') :
 @login_required
 def delete(request, id, template_name='registros/delete.html'):
     '''
-    :param request:
-    :param id:
-    :param template_name:
-    :return: registers page
+    Removes a register.
     '''
     try:
         logger.info("Deleting " + id)
@@ -152,9 +181,7 @@ def delete(request, id, template_name='registros/delete.html'):
 
 def export_csv(request):
     '''
-    :param request:
-    :param id:
-    :return: csv file
+    Generate a csv file with the selected registers.
     '''
     id_especie =  request.session['id_especie']
     especie = Especie.objects.get(pk=id_especie)

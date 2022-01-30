@@ -7,6 +7,26 @@ ESTAGIOS = (('Pioneira', 'Pioneira'),
 
 STATUS = (('Ativo', 'Ativo'), ('Inativo', 'Inativo'))
 
+CLASS_TRANSLATOR = {'Pioneira': 'Pioneira',
+                     'Secundária Inicial': 'Secundária Inicial',
+                     'Secundária Tardia': 'Secundária Tardia',
+                     'Umbrófila': 'Umbrófila',
+                     'Climácica': 'Climácica',
+                     'Secundária': 'Secundária',
+                     'P': 'Pioneira',
+                     'SI': 'Secundária Inicial',
+                     'ST': 'Secundária Tardia',
+                     'U': 'Umbrófila',
+                     'S': 'Secundária',
+                     'C': 'Climácica'}
+
+CLASS_COLOR = {'Pioneira': '#E1E1E1',
+               'Secundária Inicial': '#B1B1B1',
+               'Secundária Tardia': '#7E7E7E',
+               'Umbrófila': '#626262',
+               'Climácica': '#515151',
+               'Secundária': '#222222'}
+
 ESTADOS = (('AC', 'AC'),
            ('AL', 'AL'),
            ('AP', 'AP'),

@@ -40,6 +40,7 @@
         </form>
         <!-- list of registers -->
         {% if registros_list  %}
+            <div><canvas id="registers-pie-chart" width="1000px" height="200px"></canvas></div>
             <div class="text-right">
                 <a href="{% url 'generate_csv' %}" title="Download" class="btn btn-default">
                     <i class="fas fa-download"></i>
@@ -140,4 +141,30 @@
         </div>
     </div>
 {% endblock %}
-
+{% block chart %}
+<script>
+  let ctx = document.getElementById("registers-pie-chart").getContext("2d");
+let pie_chart = JSON.parse('{{ pie_chart|safe }}');
+  let chart = new Chart(ctx, {
+  type: "pie",
+  data: {
+     labels: pie_chart.labels,
+     datasets: [
+        {
+          backgroundColor: pie_chart.colors,
+          borderColor: pie_chart.colors,
+          data: pie_chart.values
+        }
+     ]
+  },
+  options: {
+     responsive: true,
+     maintainAspectRatio: false,
+     title: {
+        text: "Classificação Sucessional",
+        display: true
+     }
+  }
+});
+</script>
+{% endblock %}
