@@ -4,8 +4,12 @@
 docker-compose up
 
 ##### USEFUL COMMANDS
-source activate suceco
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver
-python manage.py collectstatic
+- source activate suceco
+
+- python manage.py makemigrations
+
+- python manage.py migrate
+
+- python manage.py runserver
+
+- python manage.py collectstatic
