@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+    suceco-web:
+        build: .
+        container_name: suceco-web
+        command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+        volumes:
+            - .:/suceco
+        ports:
+            - "8000:8000"
+        env_file:
+                - .env
+        depends_on: 
+            - suceco-db
+    suceco-db:
+        image: postgres
+        expose:
+            - 5432
+        container_name: suceco-db
+        env_file:
+            - .env
+        environment:
+            - POSTGRES_DB=${POSTGRES_DB}
+            - POSTGRES_USER=${POSTGRES_USER}
+            - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
