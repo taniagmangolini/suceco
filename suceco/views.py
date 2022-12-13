@@ -6,4 +6,5 @@ def index(request):
     :param request:
     :return: main page
     '''
-    return render(request, 'registros/list.html', {})
+    return render(request, 'register/list.html', {})
+

@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card border-0 shadow my-5">
+    <div class="card-body p-5">
+        <form  action="{% url 'search_regs_by_sp' %}" method="post">
+            <div class="form-group row">
+                <select id="select_specied" name="id_species" class="form-control col-md-12">
+                    <option value="" disabled selected>Selecione a espécie</option>
+                    {% for sp in species_list %}
+                        {% if species_selected.id != sp.id %}
+                            <option value="{{sp.id}}">{{sp.scientific_name}}</option>
+                        {% endif%}
+                        {% if species_selected.id == sp.id %}
+                            <option value="{{sp.id}}" selected>{{sp.scientific_name}}</option>
+                        {% endif%}
+                    {% endfor %}
+                </select>
+            </div>
+            <br/>
+            <div class="form-group row">
+                <div class="btn-toolbar pull-left">
+                    <div class="btn-group btn-group-lg">
+                        <a href="#">
+                            <input type="submit" class="btn btn-success mr-3" name="submit" value="Procurar" />
+                        </a>
+                        {% if request.user.is_authenticated%}
+                            <a href="{% url 'create_register' %}">
+                                <button type="button" class="btn btn-success mr-3"> Adicionar </button>
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% if species_selected and nr_registers == 0 %}
+                <div class="form-group row">
+                    <span class="lead"> Nenhum resultado para <i> {{species_selected.scientific_name}} </i></span>
+                </div>
+            {% endif %}
+        </form>
+
+        {% if register_list  %}
+            <div><canvas id="registers-pie-chart" width="1000px" height="200px"></canvas></div>
+            <div class="text-right">
+                <a href="{% url 'generate_csv' %}" title="Download" class="btn btn-default">
+                    <i class="fas fa-download"></i>
+                </a>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered table-condensed">
+                    <thead>
+                        <tr align="center" valign="center">
+                            <th scope="col">Classificação</th>
+                            <th scope="col">Vegetação</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Referências</th>
+                        </tr>
+                    </thead>
+                    {% for register in  page_obj %}
+                        <tr>
+                            <th scope="row">
+                                {% if register.stage == 'P' %} Pioneira
+                                {% elif register.stage == 'SI' %} Secundária Inicial
+                                {% elif register.stage == 'ST' %} Secundária Tardia
+                                {% elif register.stage == 'U' %} Umbrófila
+                                {% elif register.stage == 'S' %} Secundária
+                                {% elif register.stage == 'C' %} Climácica
+                                {% else %}
+                                    {{register.stage}}
+                                {% endif %}
+                            </th>
+                            <td>{{register.forest}}</td>
+                            <td align="center" valign="center">{{register.state}}</td>
+                            <td align="center" valign="center">
+                                <div class="btn-group" role="group">
+                                    <a href="#"
+                                       class="btn btn-default open-details-dialog"
+                                       data-detalhes="{{register.reference.publication}}"
+                                       title="Publicação">
+                                        <i class="fas fa-info"></i>
+                                    </a>
+                                    <a href="{{ register.reference.url }}"
+                                       target="_blank"
+                                       title="Link"
+                                       class="btn btn-default">
+                                        <i class="fa fa-link" aria-hidden="true"></i>
+                                    </a>
+                                    {% if request.user.is_authenticated%}
+                                        <a href="{% url 'edit_register' register.id%}"
+                                           title="Editar"
+                                           class="btn btn-default">
+                                            <i class="fa fa-edit" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="{% url 'delete_register' register.id%}"
+                                           title="Excluir"
+                                           class="btn btn-default">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    {% endif %}
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+                {% if page_obj.has_other_pages %}
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            {% if page_obj.has_previous %}
+                                <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+                            {% else %}
+                                <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
+                            {% endif %}
+                            {% for i in page_obj.paginator.page_range %}
+                                {% if page_obj.number == i %}
+                                    <li class="page-item"><a class="page-link disabled" href="#">{{ i }}</a></li>
+                                {% else %}
+                                    <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                            {% if page_obj.has_next %}
+                                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+                            {% else %}
+                                <li class="page-item disabled"><span class="page-link">&raquo;</span></li>
+                            {% endif %}
+                        </ul></nav>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+    <!-- pop up-->
+    <div id="popup" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p id="register-details"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block chart %}
+<script>
+  let ctx = document.getElementById("registers-pie-chart").getContext("2d");
+let pie_chart = JSON.parse('{{ pie_chart|safe }}');
+  let chart = new Chart(ctx, {
+  type: "pie",
+  data: {
+     labels: pie_chart.labels,
+     datasets: [
+        {
+          backgroundColor: pie_chart.colors,
+          borderColor: pie_chart.colors,
+          data: pie_chart.values
+        }
+     ]
+  },
+  options: {
+     responsive: true,
+     maintainAspectRatio: false,
+     title: {
+        text: "Classificação Sucessional",
+        display: true
+     }
+  }
+});
+</script>
+{% endblock %}

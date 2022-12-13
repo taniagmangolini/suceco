@@ -4,14 +4,13 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
-#SECRET_KEY = 'local'
+#SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'local'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-#ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -22,10 +21,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'especies.apps.EspeciesConfig',
-    'formacaoflorestal.apps.FormacaoFlorestalConfig',
-    'registros.apps.RegistrosConfig',
-    "contato.apps.ContatoConfig",
+    'species.apps.SpeciesConfig',
+    'forest.apps.ForestConfig',
+    'register.apps.RegisterConfig',
+    'contact.apps.ContactConfig',
+    'reference.apps.ReferenceConfig',
     ]
 
 MIDDLEWARE = [
@@ -63,26 +63,29 @@ WSGI_APPLICATION = 'suceco.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-'''
-DATABASES = {
-  'default': {
-      'ENGINE': 'django.db.backends.sqlite3',
-      'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
-  }
-}
-'''
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':  os.environ.get("DATABASE"),
-        'USER': os.environ.get("USER_DATABASE"),
-        'PASSWORD': os.environ.get("DB_PASSWORD"),
-        'HOST': os.environ.get("DB_HOST"),
+        'NAME':  'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'suceco-db',
         'PORT': '5432'
     }
 }
 
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME':  os.environ.get('DATABASE'),
+        'USER': os.environ.get('USER_DATABASE'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': '5432'
+    }
+}
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -123,29 +126,29 @@ LOGGING = {
     'loggers': {
 
         '': {
-            'level': 'WARNING',
+            'level': 'ERROR',
             'handlers': ['console'],
         },
 
-        'especies': {
-            'level': 'INFO',
+        'species': {
+            'level': 'ERROR',
             'handlers': ['file', 'console'],
             'propagate': False
         },
 
-        'formacaoflorestal' : {
-            'level' : 'INFO',
+        'forest' : {
+            'level' : 'ERROR',
             'handlers' : ['file', 'console'],
             'propagate' : False
         },
 
-        'registros' : {
-            'level' : 'INFO',
+        'register' : {
+            'level' : 'ERROR',
             'handlers' : ['file', 'console'],
             'propagate' : False
         },
-        'contato' : {
-            'level' : 'INFO',
+        'contact' : {
+            'level' : 'ERROR',
             'handlers' : ['file', 'console'],
             'propagate' : False
         },
@@ -177,7 +180,6 @@ LOGIN_REDIRECT_URL = '/'
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_ROOT = os.path.join(BASE_DIR, 'collectstatic')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -185,10 +187,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # EMAIL CONFIG
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST =  os.environ.get("EMAIL_HOST")
-EMAIL_PORT = os.environ.get("EMAIL_PORT")
-EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+EMAIL_HOST =  os.environ.get('EMAIL_HOST')
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-EMAIL_DESTINATARIO = os.environ.get("EMAIL_DESTINATARIO")
+EMAIL_DESTINATARIO = os.environ.get('EMAIL_RECIPIENT')

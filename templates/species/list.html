@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="card border-0 shadow my-5">
+    <div class="card-body p-5">
+
+
+    <div class="row">
+        <div class="col-md-1 col-xs-1 col-sm-1"></div>
+        <div class="col-md-10 col-xs-10 col-sm-10">
+            <h3 class="round3" style="text-align:center;">Espécies</h3>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-xs-10 col-sm-10"></div>
+        <div class="col-md-2 col-xs-1 col-sm-1">
+            <br />
+            <a href="{% url 'create_species' %}">
+                <button type="button" class="btn btn-success"> Adicionar</button>
+            </a>
+        </div>
+    </div>
+    <br />
+
+  {% for species in  species_list %}
+    <div class="row">
+        <div class="col-md-9 col-xs-9 col-sm-9">
+            <ul class="list-group">
+                <li class="list-group-item ">
+                    <a href="{% url 'edit_species' species.id%}"><i>{{ species.scientific_name }}</i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-2 col-xs-2 col-sm-2">
+            <ul class="list-group">
+                <li class="list-group-item ">
+                   {{ species.status }}
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1">
+            <ul class="list-group">
+                <li class="list-group-item ">
+                  <a href="{% url 'delete_species' species.id%}">  <i class="fas fa-trash-alt"> </i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+

@@ -1,16 +1,23 @@
-# SUCECO - Banco de Dados de Classificação Sucessional de Espécies Arbóreas
-
-### ENV
-source activate suceco
-
-### REQUIREMENTS
-pip install -r requirements.txt 
+# SUCECO - Banco de Dados de Classificação Sucessional de Árvores
 
 ### RUN
-python manage.py runserver
+docker-compose up
 
-### MIGRATE
+### USEFUL COMMANDS
+source activate suceco
+python manage.py makemigrations
 python manage.py migrate
-
-### STATIC
+python manage.py runserver
 python manage.py collectstatic
+
+Melhorias:
+- S3 storage
+- Internacionalizacao
+- Cadastro e autenticacao de colaboradores usando external provider
+- Add image field
+- Recuperacao de senha
+- Email aws
+- Melhora estetica
+- Testes
+- Busca de espécies por trabalho
+- Busca de espécies por autor

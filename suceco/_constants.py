@@ -1,11 +1,24 @@
-ESTAGIOS = (('Pioneira', 'Pioneira'),
-            ('Secundária Inicial', 'Secundária Inicial'),
-            ('Secundária Tardia', 'Secundária Tardia'),
-            ('Umbrófila', 'Umbrófila'),
-            ('Secundária', 'Secundária'),
-            ('Climácica', 'Climácica'))
+STAGES = (('Pioneira', 'Pioneira'),
+          ('Secundária Inicial', 'Secundária Inicial'),
+          ('Secundária Tardia', 'Secundária Tardia'),
+          ('Umbrófila', 'Umbrófila'),
+          ('Secundária', 'Secundária'),
+          ('Climácica', 'Climácica'))
 
-STATUS = (('Ativo', 'Ativo'), ('Inativo', 'Inativo'))
+STATUS = (
+    (1, 'Active'),
+    (0, 'Inactive')
+)
+
+DOMAINS = (
+    ('Amazonia', 'Amazonia'),
+    ('Mata Atlantica', 'Mata Atlantica'),
+    ('Caatinga', 'Caatinga'),
+    ('Cerrado', 'Cerrado'),
+    ('Pantanal', 'Pantanal'),
+    ('Pradarias', 'Pradarias'),
+    ('', '')
+)
 
 CLASS_TRANSLATOR = {'Pioneira': 'Pioneira',
                      'Secundária Inicial': 'Secundária Inicial',
@@ -27,7 +40,7 @@ CLASS_COLOR = {'Pioneira': '#E1E1E1',
                'Climácica': '#515151',
                'Secundária': '#222222'}
 
-ESTADOS = (('AC', 'AC'),
+STATES = ( ('AC', 'AC'),
            ('AL', 'AL'),
            ('AP', 'AP'),
            ('AM', 'AM'),
