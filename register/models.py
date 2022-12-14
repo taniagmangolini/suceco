@@ -18,7 +18,7 @@ class Register(models.Model) :
     latitude = models.DecimalField(max_digits=22, decimal_places=16, blank=True, null=True)
     longitude = models.DecimalField(max_digits=22, decimal_places=16, blank=True, null=True)
 
-    status = models.CharField(max_length=15, choices=STATUS, default=1)
+    status = models.IntegerField(choices=STATUS, default=1)
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
 

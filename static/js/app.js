@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#select_especie").select2();
+    $("#select_species").select2();
 });
 
 $(document).on("click", ".open-details-dialog", function (e) {

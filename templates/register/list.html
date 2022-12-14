@@ -2,9 +2,9 @@
 {% block content %}
 <div class="card border-0 shadow my-5">
     <div class="card-body p-5">
-        <form  action="{% url 'search_regs_by_sp' %}" method="post">
+        <form action="{% url 'search_regs_by_sp' %}" method="post">
             <div class="form-group row">
-                <select id="select_specied" name="id_species" class="form-control col-md-12">
+                <select id="select_species" name="id_species" class="form-control col-md-12">
                     <option value="" disabled selected>Selecione a espécie</option>
                     {% for sp in species_list %}
                         {% if species_selected.id != sp.id %}

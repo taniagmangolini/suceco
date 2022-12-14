@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'forest.apps.ForestConfig',
     'register.apps.RegisterConfig',
     'contact.apps.ContactConfig',
-    'reference.apps.ReferenceConfig',
+    'reference.apps.ReferenceConfig'
     ]
 
 MIDDLEWARE = [

@@ -6,7 +6,7 @@ class Reference(models.Model) :
     id = models.AutoField(primary_key=True)
     publication = models.CharField(max_length=1000, default= '')
     url = models.CharField(max_length=1000, default= '')
-    status = models.CharField(max_length=15, choices=STATUS, default=1)
+    status = models.IntegerField(choices=STATUS, default=1)
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
 
