@@ -1,0 +1,21 @@
+name: deploy to aws
+
+on:
+    push:
+      branches: 
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout source code
+      uses: actions/checkout@master
+
+    - name: Upload to S3
+      uses: shallwefootball/s3-upload-action@master
+      with:
+        aws_key_id: ${{ secrets.AWS_SUCECO_ACCESS_KEY_ID }}
+        aws_secret_access_key: ${{ secrets.AWS_SUCECO_SECRET_ACCESS_KEY }}
+        aws_bucket: ${{ secrets.AWS_SUCECO_BUCKET }}
