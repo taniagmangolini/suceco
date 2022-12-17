@@ -25,7 +25,8 @@
 			     </br>
 				 <div>
 			     	<button type="submit" class="btn btn-success">Enviar</button>
-					<span class="error text-danger">{% if msg != ''%} {{msg}} {% endif %}</span>
+					 <span class="error text-danger">{% if msg == 'Erro ao enviar mensagem.'%} {{msg}} {% endif %}</span>
+					 <span class=".text-success">{% if msg == 'Mensagem enviada.'%} {{msg}} {% endif %}</span>
 				</div>
 			  </form>
 			</div>
