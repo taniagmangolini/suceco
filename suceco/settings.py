@@ -63,19 +63,6 @@ WSGI_APPLICATION = 'suceco.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-'''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':  'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'suceco-db',
-        'PORT': '5432'
-    }
-}
-'''
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -83,10 +70,9 @@ DATABASES = {
         'USER': os.environ.get('POSTGRES_USER'),
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
         'HOST': os.environ.get('POSTGRES_HOST'),
-        'PORT': '5432'
+        'PORT': os.environ.get('POSTGRES_PORT')
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -186,12 +172,15 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-# EMAIL CONFIG
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST =  os.environ.get('EMAIL_HOST')
-EMAIL_PORT = os.environ.get('EMAIL_PORT')
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
-EMAIL_DESTINATARIO = os.environ.get('EMAIL_RECIPIENT')
+# EMAIL CONFIG DEFAULT
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# EMAIL CONFIG AWS SES - AWS SIMPLE EMAIL SERVICE
+EMAIL_BACKEND = 'django_ses.SESBackend'
+AWS_ACCESS_KEY_ID = os.environ.get('AWS-SES-ACCESS-KEY-ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS-SES-SECRET-ACCESS-KEY')
+AWS_SES_REGION_NAME = os.environ.get('REGION')
+AWS_SES_REGION_ENDPOINT = os.environ.get('REGION_ENDPOINT')
+USE_SES_V2 = True
+EMAIL_FROM = os.environ.get('EMAIL_FROM')
+EMAIL_DESTINATION = os.environ.get('EMAIL_DESTINATION')
