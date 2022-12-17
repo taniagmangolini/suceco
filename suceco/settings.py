@@ -177,8 +177,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # EMAIL CONFIG AWS SES - AWS SIMPLE EMAIL SERVICE
 EMAIL_BACKEND = 'django_ses.SESBackend'
-AWS_ACCESS_KEY_ID = os.environ.get('AWS-SES-ACCESS-KEY-ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS-SES-SECRET-ACCESS-KEY')
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_SES_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SES_SECRET_ACCESS_KEY')
 AWS_SES_REGION_NAME = os.environ.get('REGION')
 AWS_SES_REGION_ENDPOINT = os.environ.get('REGION_ENDPOINT')
 USE_SES_V2 = True
