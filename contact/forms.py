@@ -1,9 +1,11 @@
 from django import forms
+from captcha.fields import CaptchaField
 
 class ContactForm(forms.Form):
         email = forms.CharField(max_length=1000)
         topic = forms.CharField(max_length=1000)
         message = forms.CharField(widget=forms.Textarea(attrs={'rows' : 10}), max_length=10000)
+        captcha = CaptchaField()
 
         def __init__(self, *args, **kwargs) :
             super(ContactForm, self).__init__(*args, **kwargs)

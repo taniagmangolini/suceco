@@ -7,16 +7,15 @@ import logging
 logger = logging.getLogger(__name__)
 
 def send_message(request):
-    form = ContactForm()
+    form = ContactForm(request.POST)
     template_name = 'contact/contact.html'
     context = { 'form' : form }
 
     try:
-        subject = request.POST.get('topic', '')
-        email = request.POST.get('email', '')
-        message = request.POST.get('message', '')
-
-        if subject != '' and email != '' and message != '':
+        if form.is_valid():
+            subject = request.POST.get('topic', '')
+            email = request.POST.get('email', '')
+            message = request.POST.get('message', '')
             email = EmailMessage(subject, 
                                  message + '. From: {}'.format(email),
                                  settings.EMAIL_FROM,

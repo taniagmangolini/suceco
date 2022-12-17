@@ -10,23 +10,26 @@
 					<div class="form-group">
 						<div><label>E-mail</label></div>
 	  					{{ field.email.errors }}
-	  					{{form.email}}
+	  					{{ form.email }}
   					</div>
  					<div class="form-group">
    				 		<div><label>Assunto</label></div>
 	 					 {{ field.topic.errors }}
-	 				 	 {{form.topic}}
+	 				 	 {{ form.topic }}
   					</div>
 					<div class="form-group">
     					<div><label>Mensagem </label></div>
 			  			{{ field.message.errors }}
-	  					{{form.message}}
+	  					{{ form.message }}
+					</div>
+					<div class="form-group">
+	  					{{ form.captcha }}
 					</div>
 			     </br>
 				 <div>
 			     	<button type="submit" class="btn btn-success">Enviar</button>
 					 <span class="error text-danger">{% if msg == 'Erro ao enviar mensagem.'%} {{msg}} {% endif %}</span>
-					 <span class=".text-success">{% if msg == 'Mensagem enviada.'%} {{msg}} {% endif %}</span>
+					 <span class="success text-success">{% if msg == 'Mensagem enviada.'%} {{msg}} {% endif %}</span>
 				</div>
 			  </form>
 			</div>
@@ -59,7 +62,7 @@
 		</div>
 	</div>
 </div>
-		</div>
-  </div>
+</div>
+</div>
 </div>
 {% endblock %}

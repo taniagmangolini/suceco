@@ -11,5 +11,6 @@ urlpatterns = [
     path('reference/', include('reference.urls')),
     path('register/', include('register.urls')),
     path('contact/', include('contact.urls')),
+    path('captcha/', include('captcha.urls')),
 ]
 

@@ -1,9 +1,12 @@
-# SUCECO - Banco de Dados de Classificação Sucessional de Árvores
+## SUCECO - Banco de Dados de Classificação Sucessional de Árvores
 
-### RUN
-docker-compose up
+### Build and run
 
-##### USEFUL COMMANDS
+- docker-compose up
+
+- docker-compose up --build suceco-web (or suceco-db)
+
+##### Other useful commands
 - source activate suceco
 
 - python manage.py makemigrations
