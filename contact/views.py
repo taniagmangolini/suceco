@@ -18,7 +18,7 @@ def send_message(request):
 
         if subject != '' and email != '' and message != '':
             email = EmailMessage(subject, 
-                                 message, 
+                                 message + '. From: {}'.format(email),
                                  settings.EMAIL_FROM,
                                  [settings.EMAIL_DESTINATION])
             email.send()
