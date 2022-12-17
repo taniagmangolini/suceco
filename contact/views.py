@@ -27,7 +27,6 @@ def send_message(request):
                 'msg' : 'The message was sent.',
             }
             return render(request, template_name, context)
-        raise Exception
 
     except Exception as e:
         logger.info('[ERROR] sending email {}'.format(str(e)))
