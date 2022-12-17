@@ -24,7 +24,7 @@ def send_message(request):
             email.send()
             context = {
                 'form' : form,
-                'msg' : 'The message was sent.',
+                'msg' : 'Mensagem enviada.',
             }
         return render(request, template_name, context)
 
@@ -32,6 +32,6 @@ def send_message(request):
         logger.info('[ERROR] sending email {}'.format(str(e)))
         context = {
             'form' : form,
-            'msg' : 'It was not possible to send the message.',
+            'msg' : 'Erro ao enviar mensagem.',
         }
         return render(request, template_name, context)
