@@ -1,4 +1,4 @@
-## SUCECO - Banco de Dados de Classificação Sucessional de Árvores
+## SUCECO - Classificação Sucessional de Árvores
 
 ### Build and run
 
